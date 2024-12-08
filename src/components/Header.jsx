@@ -5,7 +5,7 @@ import { MenuLinks } from "@/constants/menuLinks";
 
 function Header() {
   return (
-    <header className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4">
+    <header className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 border-b shadow-inner z-10 fixed bg-maingray left-0 right-0">
       <div className="mx-auto flex justify-between items-center">
         <div className="w-full max-lg:w-60">
           <Image

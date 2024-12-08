@@ -15,7 +15,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        maingray: '#D3D3D3'
+        maingray: '#D3D3D3',
+        heroblack: '#000319'
       },
     },
   },
