@@ -1,0 +1,41 @@
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 280px;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  color: transparent;
+  border-radius: 50%;
+
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  width: calc(tan(60deg) * 20px / 2);
+  height: 20px;
+  clip-path: polygon(100% 100%, 0 50%, 100% 0);
+  background-color: #D9D9D9;
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  width: calc(tan(60deg) * 20px / 2);
+  height: 20px;
+  clip-path: polygon(0 100%, 100% 50%, 0 0);
+  background-color: #D9D9D9;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.swiper{
+    position: relative;
+}

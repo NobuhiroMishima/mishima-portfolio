@@ -104,18 +104,23 @@ function Hero() {
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
-        options={options}
-        className="z-0"
+        options={{
+          ...options,
+          fullScreen: {
+            enable: false, // これでposition: fixedを無効化
+          },
+        }}
+        className="absolute inset-0 size-full z-0"
       />
       <div className="relative z-5 w-full h-full text-white">
-        <div className="absolute top-24 lg:top-60 left-10 sm:left-20 lg:left-auto md:right-40 xl:right-60 text-3xl lg:text-4xl xl:text-5xl !leading-[3rem] lg:!leading-[5rem]">
+        <div className="absolute top-24 lg:top-60 left-5 xs:left-10 md:left-16 lg:left-auto md:right-40 xl:right-60 text-3xl lg:text-4xl xl:text-5xl !leading-[3rem] lg:!leading-[5rem]">
           アイデアを形に、
           <br />
           デザインを機能に、
           <br />
           未来を創る
         </div>
-        <div className="absolute bottom-5 lg:bottom-20 left-10 sm:left-20 lg:left-40 flex flex-col gap-5">
+        <div className="absolute bottom-5 lg:bottom-20 left-5 xs:left-10 md:left-16 lg:left-40 flex flex-col gap-5">
           <div>
             <h1 className="text-2xl lg:text-4xl">mishima</h1>
             <p className="text-lg lg:text-xl">This is a web creator's portfolio site.</p>

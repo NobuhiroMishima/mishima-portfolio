@@ -16,7 +16,8 @@ module.exports = {
     extend: {
       colors: {
         maingray: '#D3D3D3',
-        heroblack: '#000319'
+        heroblack: '#000319',
+        taggreen: '#008D6B'
       },
     },
   },
