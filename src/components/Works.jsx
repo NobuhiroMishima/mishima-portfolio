@@ -1,19 +1,11 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import WorksCardMini from "./WorksCardMini";
-import { projects } from "@/constants/projects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import WorksCardMini from "@/features/works/WorksCardMini";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../app/sliders.css";
 
-function Works() {
-  const [works, setWorks] = useState([]);
-  useEffect(() => {
-    setWorks(projects.slice(0, 5));
-  }, []);
+function Works({works}) {
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24">
       <div className="max-w-7xl mx-auto">
