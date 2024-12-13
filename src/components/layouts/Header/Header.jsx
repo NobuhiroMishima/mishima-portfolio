@@ -18,11 +18,13 @@ function Header() {
         <nav className="max-md:hidden">
           <ul className="flex gap-6 xl:gap-12">
             {MenuLinks.map((item) => {
-              return (
+              return item === "Home" ? (
                 <li key={item} className="text-xl lg:text-2xl lg:font-bold ">
-                  <Link href={`/${item}`}>
-                    {item}
-                  </Link>
+                  <Link href={`/`}>{item}</Link>
+                </li>
+              ) : (
+                <li key={item} className="text-xl lg:text-2xl lg:font-bold ">
+                  <Link href={`/${item}`}>{item}</Link>
                 </li>
               );
             })}

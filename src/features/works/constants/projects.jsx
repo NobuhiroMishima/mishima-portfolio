@@ -4,7 +4,7 @@ export const projects = [
         description: '動画SNSアプリのフロントエンド開発を担当しました。',
         githubUrl: '',
         image: '../../assets/projects/topicImage-1.jpg',
-        category: 'Engineer',
+        category: 'Development',
         tag: ['エンジニア', 'webアプリ', '動画SNSアプリ「moview」', 'JavaScript']
     },
     {
@@ -12,7 +12,7 @@ export const projects = [
         description: 'コーポレートサイトの実装を担当しました。',
         githubUrl: '',
         image: '../../assets/projects/topicImage-2.jpg',
-        category: 'Engineer',
+        category: 'Development',
         tag: ['エンジニア', 'コーポレートサイト', 'お問い合わせフォーム', 'WordPress']
     },
     {
@@ -28,7 +28,7 @@ export const projects = [
         description: '採用Webページの実装を担当しました。',
         githubUrl: '',
         image: '../../assets/projects/topicImage-4.jpg',
-        category: 'Engineer',
+        category: 'Development',
         tag: ['エンジニア', '採用Webサイト', 'インタビューページ', 'WordPress']
     },
     {
@@ -44,7 +44,7 @@ export const projects = [
         description: 'オフィシャルサイトのコーディングを担当しました。',
         githubUrl: '',
         image: '../../assets/projects/topicImage-6.jpg',
-        category: 'Engineer',
+        category: 'Development',
         tag: ['エンジニア', 'オフィシャルサイト', 'HTML', 'CSS', 'JavaScript', 'jQuery']
     },
     {
@@ -52,7 +52,7 @@ export const projects = [
         description: '温泉旅館のホームページのコーディングを担当しました。',
         githubUrl: '',
         image: '../../assets/projects/topicImage-7.jpg',
-        category: 'Engineer',
+        category: 'Development',
         tag: ['エンジニア', 'ホームページ', 'Web制作', 'HTML', 'CSS', 'JavaScript', 'jQuery']
     },
     {
@@ -60,7 +60,7 @@ export const projects = [
         description: 'フォトグラファーのポートフォリオサイトのコーディングを担当しました。',
         githubUrl: '',
         image: '../../assets/projects/topicImage-8.jpg',
-        category: 'Engineer',
+        category: 'Development',
         tag: ['エンジニア', 'ホームページ', 'Web制作', 'HTML', 'CSS', 'JavaScript', 'jQuery']
     },
 ]

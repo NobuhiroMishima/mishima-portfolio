@@ -4,7 +4,7 @@ function Backtitle({ color, text, className }) {
       style={{
         color: color,
       }}
-      className={`${className} text-[128px] font-bold`}
+      className={`${className} text-[128px] font-bold lg:tracking-[2rem]`}
     >
       {text}
     </p>
