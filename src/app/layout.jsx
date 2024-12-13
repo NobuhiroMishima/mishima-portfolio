@@ -26,7 +26,7 @@ function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-maingray`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="mt-[62px] lg:mt-[82px]">{children}</main>
         <Footer />
       </body>
     </html>

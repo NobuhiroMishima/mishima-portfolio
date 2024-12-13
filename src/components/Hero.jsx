@@ -100,7 +100,7 @@ function Hero() {
   // });
 
   return (
-    <section className="bg-heroblack h-[480px] lg:h-screen relative">
+    <section className="bg-heroblack h-[480px] lg:h-[calc(100vh-82px)] relative">
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}

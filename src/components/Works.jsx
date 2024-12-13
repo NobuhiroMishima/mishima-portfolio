@@ -22,10 +22,10 @@ function Works({ works }) {
             navigation={{ prevEl: "#button_prev", nextEl: "#button_next" }}
             breakpoints={{
               1280: {
-                slidesPerView: 4,
+                slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
               768: {
                 slidesPerView: 2,
