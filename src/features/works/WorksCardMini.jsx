@@ -16,7 +16,6 @@ function WorksCardMini({ name, image, description, tag }) {
           {tag.map((keyword) => `#${keyword} `)}
         </p>
       </div>
-      {/* <div className="absolute bottom-0 left-0 right-0 h-2 bg-amber-600"></div> */}
     </div>
   );
 }

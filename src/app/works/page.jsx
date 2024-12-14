@@ -1,7 +1,15 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Headline from "@/components/elements/title/Headline";
-import React from "react";
+import { projects } from "@/features/works/constants/projects";
+import WorksCard from "@/features/works/WorksCard";
 
 function page() {
+  const [works, setWorks] = useState([]);
+  useEffect(() => {
+    setWorks(projects);
+  }, []);
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 relative">
       <div className="max-w-6xl mx-auto">
@@ -11,15 +19,26 @@ function page() {
         <div className="flex flex-col gap-8">
           <div>
             <p>
-            個人から法人まで多様なジャンルの実績を紹介します。<br />
-            ※クライアントとの契約上、一部の名称を変更しているほか、公開していない制作物もございます。
+              個人から法人まで多様なジャンルの実績を紹介します。
+              <br />
+              ※クライアントとの契約上、一部の名称を変更しているほか、公開していない制作物もございます。
             </p>
           </div>
-          <div>
-            
+          <div>{/* フィルターを記載 */}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-20 gap-y-10 place-items-center">
+            {works.map((work, index) => (
+              <WorksCard
+                key={index}
+                name={work.name}
+                description={work.description}
+                githubUrl={work.githubUrl}
+                image={work.image}
+                category={work.category}
+                tag={work.tag}
+              />
+            ))}
           </div>
         </div>
-
       </div>
     </section>
   );

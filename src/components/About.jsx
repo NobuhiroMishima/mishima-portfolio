@@ -2,6 +2,7 @@ import React from "react";
 import Backtitle from "./elements/title/Backtitle";
 import Headline from "./elements/title/Headline";
 import PageTransitionButton from "./elements/button/PageTransitionButton";
+import CategoryBadge from "./elements/badge/CategoryBadge";
 
 function About() {
   return (
@@ -38,9 +39,7 @@ function About() {
               </h4>
             </div>
             <div>
-              <div className="inline-block bg-badgegray px-2 rounded-xl">
-                <p className="text-xs leading-5">full-stack creator</p>
-              </div>
+              <CategoryBadge text={"full-stack creator"} />
               <div className="flex gap-8 font-bold text-xl">
                 <h5>Creator Name</h5>
                 <p>mishima</p>
