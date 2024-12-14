@@ -12,7 +12,7 @@ function About() {
           <Backtitle
             color={"black"}
             text={"ABOUT"}
-            className="-tracking-widest bg-gradient-to-r from-yellow-300 bg-[length:100%_20px] bg-center bg-no-repeat"
+            className="-tracking-widest bg-gradient-to-r from-green-700 bg-[length:100%_20px] bg-center bg-no-repeat"
           />
           <Headline subtitle={"私のこだわり"} />
         </div>

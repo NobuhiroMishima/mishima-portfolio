@@ -1,6 +1,6 @@
 function CategoryBadge({ text }) {
   return (
-    <div className="inline-block bg-badgegray px-2 rounded-xl">
+    <div className="inline-block bg-taggreen px-2 rounded-xl text-white">
       <p className="text-xs leading-5">{text}</p>
     </div>
   );

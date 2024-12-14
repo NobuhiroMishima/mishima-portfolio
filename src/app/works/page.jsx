@@ -4,11 +4,15 @@ import { useEffect, useState } from "react";
 import Headline from "@/components/elements/title/Headline";
 import { projects } from "@/features/works/constants/projects";
 import WorksCard from "@/features/works/WorksCard";
+import WorksFilter from "@/features/works/WorksFilter";
 
 function page() {
   const [works, setWorks] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [filterd, setFilterd] = useState([]);
   useEffect(() => {
     setWorks(projects);
+    setFilterd(projects);
   }, []);
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 relative">
@@ -24,9 +28,11 @@ function page() {
               ※クライアントとの契約上、一部の名称を変更しているほか、公開していない制作物もございます。
             </p>
           </div>
-          <div>{/* フィルターを記載 */}</div>
+          <div>
+            <WorksFilter activeCategory={activeCategory} setActiveCategory={setActiveCategory} works={works} setFilterd={setFilterd} />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-20 gap-y-10 place-items-center">
-            {works.map((work, index) => (
+            {filterd.map((work, index) => (
               <WorksCard
                 key={index}
                 name={work.name}
