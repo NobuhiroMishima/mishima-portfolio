@@ -20,7 +20,7 @@ function page() {
         <div className="flex flex-col items-start mb-12">
           <Headline title={"Works"} subtitle={"これまでの実績"} />
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-10">
           <div>
             <p>
               個人から法人まで多様なジャンルの実績を紹介します。
