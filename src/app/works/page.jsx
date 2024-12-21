@@ -35,10 +35,11 @@ function page() {
             {filterd.map((work, index) => (
               <WorksCard
                 key={index}
+                id={work.id}
                 name={work.name}
                 description={work.description}
                 githubUrl={work.githubUrl}
-                image={work.image}
+                topicImage={work.topicImage}
                 category={work.category}
                 tag={work.tag}
               />

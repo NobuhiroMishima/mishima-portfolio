@@ -39,7 +39,7 @@ function Works({ works }) {
               <SwiperSlide key={index}>
                 <WorksCardMini
                   name={work.name}
-                  image={work.image}
+                  topicImage={work.topicImage}
                   description={work.description}
                   tag={work.tag}
                 />

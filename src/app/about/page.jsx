@@ -6,6 +6,7 @@ import { skills } from "@/features/about/constants/skills";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
+import SubHeadline from "@/components/elements/title/SubHeadline";
 
 function page() {
   return (
@@ -24,9 +25,7 @@ function page() {
             <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
               <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pr-5 sm:pr-10 md:pr-32 lg:pr-36">
                 <div className="w-full">
-                  <h4 className="text-2xl font-bold mb-4 xs:mb-10 max-md:text-center">
-                    Profile
-                  </h4>
+                  <SubHeadline text="Profile" />
                 </div>
                 <div className="flex-1 max-md:order-3">
                   <div className="mb-4">
@@ -62,9 +61,7 @@ function page() {
             <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
               <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pl-5 sm:pl-10 md:pl-32 lg:pl-40">
                 <div className="w-full">
-                  <h4 className="text-2xl font-bold mb-4 xs:mb-10 max-md:text-center">
-                    Why Create?
-                  </h4>
+                  <SubHeadline text="Why Create?" />
                 </div>
                 <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0">
                   <img
@@ -94,7 +91,7 @@ function page() {
           <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 relative">
             <div className="max-w-6xl mx-auto">
               <div className="mb-10">
-                <h4 className="text-2xl font-bold mb-5">Skills</h4>
+                <SubHeadline text="Skills" />
                 <p>
                   企画、デザイン・設計から実装まで幅広くスキルセットを保有しています。（2024年9月30日現在）
                 </p>

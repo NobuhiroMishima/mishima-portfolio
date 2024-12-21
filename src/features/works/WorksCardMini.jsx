@@ -1,10 +1,10 @@
 import React from "react";
 
-function WorksCardMini({ name, image, description, tag }) {
+function WorksCardMini({ name, topicImage, description, tag }) {
   return (
     <div className="w-[280px] min-h-[280px] bg-contentgray p-4 flex flex-col items-center rounded-lg">
       <img
-        src={image}
+        src={topicImage}
         alt={`${name} Image`}
         width={256}
         height={144}
