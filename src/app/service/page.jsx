@@ -1,5 +1,6 @@
 import Headline from "@/components/elements/title/Headline";
 import { servicecontent } from "@/features/service/constants/servicecontent";
+import Link from "next/link";
 
 function page() {
   return (
@@ -20,15 +21,17 @@ function page() {
           </div>
           <div className="flex flex-wrap justify-around max-w-[1072px] gap-6">
             {servicecontent.map((content, index) => (
+              <Link key={index} href={`/service/${content.id}`}>
                 <img
-                key={index}
                 src={content.cardimage}
                 alt={`${content.name} Image`}
                 height={144}
                 className="h-36 object-contain"
                 />
+              </Link>
             ))}
           </div>
+          
         </div>
       </div>
     </section>

@@ -20,7 +20,8 @@ module.exports = {
         heroblack: '#000319',
         taggreen: '#008D6B',
         strongred: '#904669',
-        badgegray: '#D9D9D9'
+        badgegray: '#D9D9D9',
+        boxblue: '#E6E6FA'
       },
     },
   },

@@ -39,11 +39,11 @@ async function ProjectDetail({ params }) {
               </Link>
             </div>
           </div>
-          <div className="flex gap-28 items-center">
+          <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
             <h4 className="w-24 font-bold text-2xl">制作概要</h4>
             <p className="flex-1">{project.overview}</p>
           </div>
-          <div className="flex gap-28 items-center">
+          <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
             <h4 className="w-24 font-bold text-2xl">制作内容</h4>
             <p className="flex-1">{project.content}</p>
           </div>

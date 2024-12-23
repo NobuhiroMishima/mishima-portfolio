@@ -1,5 +1,6 @@
 export const servicecontent = [
     {
+        id: 1,
         name: 'Web制作まるっとプラン',
         subcatch: '未来を創る100%オリジナルのWebサイト',
         catch: '企画・デザイン・コーディングをワンストップでご支援いたします。',
@@ -17,10 +18,11 @@ export const servicecontent = [
             'Googleアナリティクス設定',
             '納品後1カ月Webサイト分析'
         ],
-        mainimage: "fullplan-mainimg",
-        cardimage: "../../assets/service/serviceCard-recommend.png"
+        mainimage: "../../assets/service/mainImage/main_fullplan.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_fullplan.png"
     },
     {
+        id: 2,
         name: 'コーディングプラン',
         subcatch: 'WordPress・レスポンシブ対応',
         catch: '高品質なホームページを安く早く制作いたします。',
@@ -38,10 +40,11 @@ export const servicecontent = [
             'Googleアナリティクス設定',
             'データ・サーバーアップ選択OK'
         ],
-        mainimage: "fullplan-mainimg",
-        cardimage: "../../assets/service/serviceCard-cording.png",
+        mainimage: "../../assets/service/mainImage/main_fullplan.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
     },
     {
+        id: 3,
         name: 'コーディングプラン',
         subcatch: 'WordPress・レスポンシブ対応',
         catch: '高品質なホームページを安く早く制作いたします。',
@@ -59,7 +62,7 @@ export const servicecontent = [
             'Googleアナリティクス設定',
             'データ・サーバーアップ選択OK'
         ],
-        mainimage: "fullplan-mainimg",
-        cardimage: "../../assets/service/serviceCard-cording.png",
+        mainimage: "../../assets/service/mainImage/main_fullplan.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
     },
 ]
