@@ -18,6 +18,7 @@ module.exports = {
         maingray: '#D3D3D3',
         contentgray: '#F0F0F0',
         heroblack: '#000319',
+        footerblack: '#121212',
         taggreen: '#008D6B',
         strongred: '#904669',
         badgegray: '#D9D9D9',
