@@ -14,12 +14,12 @@ function Home() {
     setWorks(projects.slice(0, 6));
   }, []);
   return (
-    <>
+    <main>
       <Hero />
       <Works works={works} />
       <About />
       <Service servicemenu={servicemenu} />
-    </>
+    </main>
   );
 }
 

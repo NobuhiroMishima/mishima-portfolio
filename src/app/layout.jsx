@@ -26,11 +26,11 @@ function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-maingray`}
       >
         <Header />
-        <main className="mt-[62px] lg:mt-[82px]">{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
   );
 }
 
-export default RootLayout
+export default RootLayout;
