@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       colors: {
         maingray: '#D3D3D3',
+        maingrayOp: '#d3d3d3cc',
         contentgray: '#F0F0F0',
         heroblack: '#000319',
         footerblack: '#121212',
