@@ -1,8 +1,9 @@
+import Link from "next/link";
 import React from "react";
 
 function ServiceCard({ menu }) {
   return (
-    <div className="rounded-lg overflow-hidden bg-white max-w-[360px]">
+    <Link href={"/service"} className="rounded-lg overflow-hidden bg-white max-w-[360px] transform transition duration-500 ease-in-out hover:shadow-card-lg  hover:translate-y-[-2px]">
       <div>
         <img
           src={menu.image}
@@ -36,7 +37,7 @@ function ServiceCard({ menu }) {
           <button className="px-4 mb-4 text-xs">VIEW MORE</button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

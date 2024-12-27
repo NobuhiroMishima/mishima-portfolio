@@ -25,6 +25,9 @@ module.exports = {
         badgegray: '#D9D9D9',
         boxblue: '#E6E6FA'
       },
+      boxShadow: {
+        'card-lg': '0px 16px 32px rgba(0, 0, 0, 0.35), 0px 8px 16px rgba(0, 0, 0, 0.25)',
+      }
     },
   },
   plugins: [],
