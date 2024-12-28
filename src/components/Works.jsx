@@ -36,7 +36,7 @@ function Works({ works }) {
             }}
           >
             {works.map((work, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="p-4">
                 <WorksCardMini
                   name={work.name}
                   topicImage={work.topicImage}

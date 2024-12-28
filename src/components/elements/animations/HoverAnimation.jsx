@@ -1,6 +1,6 @@
 import { cloneElement } from "react";
 
-function HoverAnimation({ children, hoverClass = "", transitionDuration = "300ms" }) {
+function HoverAnimation({ children, hoverClass = "", transitionDuration = "500ms" }) {
   // childrenにクラス名とスタイルを注入
   const animatedChild = cloneElement(children, {
     className: `${

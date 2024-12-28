@@ -2,13 +2,12 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 320px;
+  top: 360px;
   width: 32px;
   height: 32px;
-  background-color: white;
+  background-color: #F0F0F0;
   color: transparent;
   border-radius: 50%;
-
 }
 /* 前への矢印カスタマイズ */
 .swiper-button-prev::after {
@@ -18,7 +17,7 @@
   width: calc(tan(60deg) * 20px / 2);
   height: 20px;
   clip-path: polygon(100% 100%, 0 50%, 100% 0);
-  background-color: #D9D9D9;
+  background-color: #D3D3D3;
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
@@ -28,12 +27,16 @@
   width: calc(tan(60deg) * 20px / 2);
   height: 20px;
   clip-path: polygon(0 100%, 100% 50%, 0 0);
-  background-color: #D9D9D9;
+  background-color: #D3D3D3;
 }
 
 .swiper-slide{
     display: flex;
     justify-content: center;
+}
+.swiper-slide:hover{
+  transform: translateY(-2px);
+  transition: 0.5s ease-in-out;
 }
 
 .swiper{

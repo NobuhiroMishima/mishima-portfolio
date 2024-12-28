@@ -26,6 +26,7 @@ module.exports = {
         boxblue: '#E6E6FA'
       },
       boxShadow: {
+        'card-md': '0px 12px 24px rgba(0, 0, 0, 0.30), 0px 6px 12px rgba(0, 0, 0, 0.20)',
         'card-lg': '0px 16px 32px rgba(0, 0, 0, 0.35), 0px 8px 16px rgba(0, 0, 0, 0.25)',
       },
       transitionDelay: {
