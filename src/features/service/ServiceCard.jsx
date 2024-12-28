@@ -1,9 +1,42 @@
 import Link from "next/link";
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 
-function ServiceCard({ menu }) {
+function ServiceCard({ menu, index }) {
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 } // カードが20%表示されたら発火
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <Link href={"/service"} className="rounded-lg overflow-hidden bg-white max-w-[360px] transform transition duration-500 ease-in-out hover:shadow-card-lg  hover:translate-y-[-2px]">
+    <Link
+      href={"/service"}
+      ref={cardRef}
+      className={`rounded-lg overflow-hidden bg-white max-w-[360px] transform transition-all duration-1000 ease-in-out ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      } hover:shadow-card-lg hover:translate-y-[-2px] hover:duration-500`}
+      style={{
+        transitionDelay: `${index * 100}ms`,
+      }}
+    >
       <div>
         <img
           src={menu.image}

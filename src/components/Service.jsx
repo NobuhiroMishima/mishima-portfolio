@@ -17,7 +17,7 @@ function Service({ servicemenu }) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 place-items-center">
           {servicemenu.map((menu, index) => (
-            <ServiceCard key={index} menu={menu} />
+            <ServiceCard key={index} menu={menu} index={index} />
           ))}
         </div>
       </div>

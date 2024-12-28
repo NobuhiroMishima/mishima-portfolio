@@ -27,7 +27,12 @@ module.exports = {
       },
       boxShadow: {
         'card-lg': '0px 16px 32px rgba(0, 0, 0, 0.35), 0px 8px 16px rgba(0, 0, 0, 0.25)',
-      }
+      },
+      transitionDelay: {
+        100: "100ms",
+        200: "200ms",
+        300: "300ms",
+      },
     },
   },
   plugins: [],
