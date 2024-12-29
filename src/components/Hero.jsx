@@ -5,9 +5,12 @@ import { MdEmail } from "react-icons/md";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiWantedly } from "react-icons/si";
 import { loadSlim } from "@tsparticles/slim";
+import { appearDown, appearRight, appearUp } from "./utils/appear";
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function Hero() {
   const [init, setInit] = useState(false);
+  const { elementRef, isVisible } = useIntersectionObserver();
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -113,7 +116,7 @@ function Hero() {
         className="absolute inset-0 size-full z-0"
       />
       <div className="relative z-5 w-full h-full text-white">
-        <div className="absolute top-24 lg:top-60 left-5 xs:left-10 md:left-16 lg:left-auto md:right-40 xl:right-60 text-3xl lg:text-4xl xl:text-5xl !leading-[3rem] lg:!leading-[5rem]">
+        <div ref={elementRef} className={appearUp(isVisible, "absolute top-24 lg:top-60 left-5 xs:left-10 md:left-16 lg:left-auto md:right-40 xl:right-60 text-3xl lg:text-4xl xl:text-5xl !leading-[3rem] lg:!leading-[5rem]")}>
           アイデアを形に、
           <br />
           デザインを機能に、
@@ -121,18 +124,18 @@ function Hero() {
           未来を創る
         </div>
         <div className="absolute bottom-5 lg:bottom-20 left-5 xs:left-10 md:left-16 lg:left-40 flex flex-col gap-5">
-          <div>
+          <div ref={elementRef} className={appearRight(isVisible)} style={{ transitionDelay: "1000ms" }}>
             <h1 className="text-2xl lg:text-4xl">mishima</h1>
             <p className="text-lg lg:text-xl">This is a web creator's portfolio site.</p>
           </div>
-          <div>
+          <div  ref={elementRef} className={appearRight(isVisible)} style={{ transitionDelay: "1100ms" }}>
             <div className="flex flex-row gap-2 items-center">
               <MdEmail />
               <span className="text-darkblue pb-1 text-md lg:text-lg ">
                 nobuhiro.mishima@outlook.com
               </span>
             </div>
-            <div className="flex flex-colitems-center gap-4 mb-3">
+            <div ref={elementRef} className={appearRight(isVisible, "flex flex-colitems-center gap-4 mb-3")} style={{ transitionDelay: "1200ms" }}>
               <a
                 href=""
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
