@@ -1,24 +1,30 @@
 'use client'
 
-function PageTransitionButton({ textcolor, bgcolor, text }) {
+import Link from "next/link";
+import { useNavigate } from "react-router-dom";
+
+function PageTransitionButton({ page, textcolor, bgcolor, text }) {
+
   return (
-    <button
-      style={{
-        backgroundColor: bgcolor,
-        color: textcolor,
-      }}
-      className="px-5 py-2 border-2 border-black drop-shadow-2xl text-sm transition-colors duration-300 ease-in-out hover:bg-current hover:text-current"
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = textcolor;
-        e.currentTarget.style.color = bgcolor;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = bgcolor;
-        e.currentTarget.style.color = textcolor;
-      }}
-    >
-      {text}
-    </button>
+    <Link href={`/${page}`}>
+      <div
+        style={{
+          backgroundColor: bgcolor,
+          color: textcolor,
+        }}
+        className="px-5 py-2 border-2 border-black drop-shadow-2xl text-sm transition-colors duration-300 ease-in-out hover:bg-current hover:text-current"
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = textcolor;
+          e.currentTarget.style.color = bgcolor;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = bgcolor;
+          e.currentTarget.style.color = textcolor;
+        }}
+      >
+        {text}
+      </div>
+    </Link>
   );
 }
 

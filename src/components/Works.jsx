@@ -7,15 +7,23 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../app/sliders.css";
 import Backtitle from "./elements/title/Backtitle";
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function Works({ works }) {
+  const { elementRef, isVisible } = useIntersectionObserver();
+
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24 relative">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center mb-12">
           <Headline title={"Works"} subtitle={"これまでの実績"} />
         </div>
-        <div className="relative mb-6">
+        <div
+          ref={elementRef}
+          className={`relative mb-6 transform transition-all duration-1000 ease-in-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+          }`}
+        >
           <Swiper
             modules={[Navigation]}
             slidesPerView={3}
@@ -57,6 +65,7 @@ function Works({ works }) {
         </div>
         <div className="flex justify-center">
           <PageTransitionButton
+            page={"works"}
             textcolor={"black"}
             bgcolor={"white"}
             text={"一覧から探す"}

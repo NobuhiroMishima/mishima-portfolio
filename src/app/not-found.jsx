@@ -23,13 +23,12 @@ function notFound() {
             <p className="mb-10">
               HOMEから再度アクセスいただくか、少し時間を空けてお試しください。
             </p>
-            <Link href={"/"}>
-              <PageTransitionButton
-                textcolor={"white"}
-                bgcolor={"black"}
-                text={"HOMEから探す"}
-              />
-            </Link>
+            <PageTransitionButton
+              page={""}
+              textcolor={"white"}
+              bgcolor={"black"}
+              text={"HOMEから探す"}
+            />
           </div>
         </div>
       </div>

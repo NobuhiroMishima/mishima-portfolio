@@ -3,8 +3,10 @@ import Backtitle from "./elements/title/Backtitle";
 import Headline from "./elements/title/Headline";
 import PageTransitionButton from "./elements/button/PageTransitionButton";
 import CategoryBadge from "./elements/badge/CategoryBadge";
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function About() {
+  const { elementRef, isVisible } = useIntersectionObserver();
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24">
       <div className="max-w-6xl mx-auto bg-contentgray">
@@ -27,10 +29,17 @@ function About() {
             />
           </div>
           <div className="flex flex-col w-full gap-6">
-            <div className="flex justify-center">
+            <div
+              ref={elementRef}
+              className={`flex justify-center transform transition-all duration-1000 ease-out ${
+                isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-10 opacity-0"
+              }`}
+            >
               <h4 className="text-xl lg:text-2xl">
                 UXで価値を創造。
-                <strong className="font-medium text-strongred">
+                <strong className="font-bold text-strongred">
                   ユーザー目線
                 </strong>
                 で
@@ -38,30 +47,55 @@ function About() {
                 社会課題を解決するクリエイター
               </h4>
             </div>
-            <div>
+            <div
+              ref={elementRef}
+              className={`transform transition-all duration-1000 ease-out ${
+                isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-10 opacity-0"
+              }`}
+              style={{ transitionDelay: "100ms" }}
+            >
               <CategoryBadge text={"full-stack creator"} />
               <div className="flex gap-8 font-bold text-xl">
                 <h5>Creator Name</h5>
                 <p>mishima</p>
               </div>
             </div>
-            <div>
+            <div
+              ref={elementRef}
+              className={`transform transition-all duration-1000 ease-out ${
+                isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-10 opacity-0"
+              }`}
+              style={{ transitionDelay: "200ms" }}
+            >
               <p>
                 “
-                <strong className="font-medium text-strongred">
+                <strong className="font-bold text-strongred">
                   ユーザー体験を向上させること
                 </strong>
                 ”をモットーに、Webサイトやデジタルプロダクトに関わるさまざまな課題を解決してきたmishimaです。
                 <br />
                 ユーザー体験を大切にしながら
-                <strong className="font-medium text-strongred">
+                <strong className="font-bold text-strongred">
                   機能性・デザイン・品質
                 </strong>
                 を高めることを目指して活動しています。
               </p>
             </div>
-            <div className="flex justify-end">
+            <div
+              ref={elementRef}
+              className={`flex justify-end transform transition-all duration-1000 ease-out ${
+                isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-10 opacity-0"
+              }`}
+              style={{ transitionDelay: "100ms" }}
+            >
               <PageTransitionButton
+                page={"about"}
                 textcolor={"white"}
                 bgcolor={"black"}
                 text={"もっと詳しく"}
