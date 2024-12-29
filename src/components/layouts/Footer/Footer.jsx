@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { MenuLinks } from "../Header/constants/menuLinks";
 import Link from "next/link";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import Image from "next/image";
 
 function Footer() {
   const name = useRef();
@@ -40,21 +41,21 @@ function Footer() {
           <div className="flex flex-col gap-12 mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 place-items-center">
               <div>
-                <img src="./assets/footer/banner-1.png" alt="" width={272} />
+                <Image src={"/assets/footer/banner-1.png"} alt="" width={272} height={100} />
               </div>
               <div>
-                <img src="./assets/footer/banner-2.png" alt="" width={272} />
+                <Image src={"/assets/footer/banner-2.png"} alt="" width={272} height={100}/>
               </div>
               <div>
-                <img src="./assets/footer/banner-3.png" alt="" width={272} />
+                <Image src={"/assets/footer/banner-3.png"} alt="" width={272} height={100}/>
               </div>
               <div>
-                <img src="./assets/footer/banner-4.png" alt="" width={272} />
+                <Image src={"/assets/footer/banner-4.png"} alt="" width={272} height={100}/>
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-12 md:gap-32">
               <div className="flex flex-col gap-4 order-2 md:order-1">
-                <img src="./assets/footer/logo-sm.svg" alt="" width={200} />
+                <Image src={"/assets/footer/logo-sm.svg"} alt="" width={200} height={30} />
                 <ul className="flex flex-col gap-2">
                   {MenuLinks.map((item) =>
                     item === "Home" ? (

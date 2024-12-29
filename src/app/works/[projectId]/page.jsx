@@ -1,7 +1,9 @@
+import PageTransitionButton from "@/components/elements/button/PageTransitionButton";
 import Headline from "@/components/elements/title/Headline";
 import SubHeadline from "@/components/elements/title/SubHeadline";
 import { projects } from "@/features/works/constants/projects";
 import ProjectHeadLine from "@/features/works/ProjectHeadLine";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -25,9 +27,14 @@ async function ProjectDetail({ params }) {
           />
         </div>
         <div className="flex flex-col gap-14 mb-40">
-          <div>
-            <img src={project.screenImage} alt={`${project.name} Image`} />
-            <div>
+          <div className="flex flex-col items-center">
+            <Image
+              src={project.screenImage}
+              alt={`${project.name} Image`}
+              width={800}
+              height={500}
+              priority
+            />
               <Link
                 href={project.url}
                 target="_blank"
@@ -37,7 +44,6 @@ async function ProjectDetail({ params }) {
                 <p>{project.url}</p>
                 <FaExternalLinkAlt />
               </Link>
-            </div>
           </div>
           <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
             <h4 className="w-24 font-bold text-2xl">制作概要</h4>
@@ -49,11 +55,25 @@ async function ProjectDetail({ params }) {
           </div>
           <div className="flex flex-col gap-14">
             <h4 className="w-24 font-bold text-2xl">制作画像</h4>
-            <img src={project.detailImage} alt="" />
+            <Image
+              src={project.detailImage}
+              alt=""
+              width={740}
+              height={1200}
+              className="m-auto"
+            />
           </div>
         </div>
         <div>
           <SubHeadline text="Related Works" />
+        </div>
+        <div className="flex justify-center">
+          <PageTransitionButton
+            page={"work"}
+            textcolor={"black"}
+            bgcolor={"white"}
+            text={"一覧に戻る"}
+          />
         </div>
       </div>
     </section>

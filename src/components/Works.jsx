@@ -45,6 +45,7 @@ function Works({ works }) {
             {works.map((work, index) => (
               <SwiperSlide key={index} className="p-4">
                 <WorksCardMini
+                  id={work.id}
                   name={work.name}
                   topicImage={work.topicImage}
                   description={work.description}

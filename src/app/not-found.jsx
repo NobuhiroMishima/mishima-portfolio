@@ -1,5 +1,6 @@
 import PageTransitionButton from "@/components/elements/button/PageTransitionButton";
 import Headline from "@/components/elements/title/Headline";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -17,7 +18,7 @@ function notFound() {
         </div>
         <div className="flex flex-col lg:flex-row items-center gap-x-40 justify-around">
           <div>
-            <img src="../assets/404.png" alt="" width={400} />
+            <Image src={"/assets/404.png"} alt="" width={400} height={400} />
           </div>
           <div className="bg-contentgray p-10 text-center">
             <p className="mb-10">

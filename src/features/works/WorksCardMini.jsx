@@ -2,11 +2,11 @@ import useIntersectionObserver from "@/components/hooks/useIntersectionObserver"
 import Link from "next/link";
 import React from "react";
 
-function WorksCardMini({ name, topicImage, description, tag }) {
+function WorksCardMini({ id, name, topicImage, description, tag }) {
 
   return (
     <Link
-      href={"/works"}
+      href={`/works/${id}`}
       className="relative w-[280px] min-h-[300px] bg-contentgray flex flex-col items-center rounded-lg duration-1000 shadow-md hover:shadow-card-md"
     >
       <div className="p-4 duration-500 hover:scale-105">

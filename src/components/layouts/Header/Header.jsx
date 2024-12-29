@@ -48,7 +48,7 @@ function Header() {
           {pathname === "/" ? (
             isScrolled ? (
               <Image
-                src={"assets/logoB.svg"}
+                src={"/assets/logoB.svg"}
                 width={398}
                 height={50}
                 alt="mishima's portfolio"
@@ -56,7 +56,7 @@ function Header() {
               />
             ) : (
               <Image
-                src={"assets/logoW.svg"}
+                src={"/assets/logoW.svg"}
                 width={398}
                 height={50}
                 alt="mishima's portfolio"
@@ -65,7 +65,7 @@ function Header() {
             )
           ) : (
             <Image
-              src={"assets/logoB.svg"}
+              src={"/assets/logoB.svg"}
               width={398}
               height={50}
               alt="mishima's portfolio"
