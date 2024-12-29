@@ -1,4 +1,5 @@
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import { appearUp } from "@/components/utils/appear";
 import Link from "next/link";
 
 function ServiceCard({ menu, index }) {
@@ -8,9 +9,7 @@ function ServiceCard({ menu, index }) {
     <Link
       href={"/service"}
       ref={elementRef}
-      className={`rounded-lg overflow-hidden bg-white max-w-[360px] transform transition-all duration-1000 ease-in-out ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-      } hover:shadow-card-lg hover:translate-y-[-2px] hover:duration-500`}
+      className={appearUp(isVisible, "rounded-lg overflow-hidden bg-white max-w-[360px] hover:shadow-card-lg hover:translate-y-[-2px] hover:duration-500")}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div>

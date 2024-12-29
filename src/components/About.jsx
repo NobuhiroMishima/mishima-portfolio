@@ -4,6 +4,7 @@ import Headline from "./elements/title/Headline";
 import PageTransitionButton from "./elements/button/PageTransitionButton";
 import CategoryBadge from "./elements/badge/CategoryBadge";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
+import { appearLeft } from "./utils/appear";
 
 function About() {
   const { elementRef, isVisible } = useIntersectionObserver();
@@ -31,11 +32,7 @@ function About() {
           <div className="flex flex-col w-full gap-6">
             <div
               ref={elementRef}
-              className={`flex justify-center transform transition-all duration-1000 ease-out ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-10 opacity-0"
-              }`}
+              className={appearLeft(isVisible, "flex justify-center")}
             >
               <h4 className="text-xl lg:text-2xl">
                 UXで価値を創造。
@@ -49,11 +46,7 @@ function About() {
             </div>
             <div
               ref={elementRef}
-              className={`transform transition-all duration-1000 ease-out ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-10 opacity-0"
-              }`}
+              className={appearLeft(isVisible)}
               style={{ transitionDelay: "100ms" }}
             >
               <CategoryBadge text={"full-stack creator"} />
@@ -64,11 +57,7 @@ function About() {
             </div>
             <div
               ref={elementRef}
-              className={`transform transition-all duration-1000 ease-out ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-10 opacity-0"
-              }`}
+              className={appearLeft(isVisible)}
               style={{ transitionDelay: "200ms" }}
             >
               <p>
@@ -87,11 +76,7 @@ function About() {
             </div>
             <div
               ref={elementRef}
-              className={`flex justify-end transform transition-all duration-1000 ease-out ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-10 opacity-0"
-              }`}
+              className={appearLeft(isVisible, "flex justify-end")}
               style={{ transitionDelay: "100ms" }}
             >
               <PageTransitionButton

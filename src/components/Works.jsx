@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "../app/sliders.css";
 import Backtitle from "./elements/title/Backtitle";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
+import { appearUp } from "./utils/appear";
 
 function Works({ works }) {
   const { elementRef, isVisible } = useIntersectionObserver();
@@ -20,9 +21,7 @@ function Works({ works }) {
         </div>
         <div
           ref={elementRef}
-          className={`relative mb-6 transform transition-all duration-1000 ease-in-out ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
-          }`}
+          className={appearUp(isVisible, "relative mb-6")}
         >
           <Swiper
             modules={[Navigation]}
