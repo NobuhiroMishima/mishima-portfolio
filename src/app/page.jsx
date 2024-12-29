@@ -14,7 +14,7 @@ function Home() {
     setWorks(projects.slice(0, 6));
   }, []);
   return (
-    <main>
+    <main className="mb-24">
       <Hero />
       <Works works={works} />
       <About />

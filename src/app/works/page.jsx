@@ -15,7 +15,7 @@ function page() {
     setFilterd(projects);
   }, []);
   return (
-    <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 relative">
+    <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 pb-24 relative">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-start mb-12">
           <Headline title={"Works"} subtitle={"これまでの実績"} />

@@ -52,6 +52,7 @@ function Header() {
                 width={398}
                 height={50}
                 alt="mishima's portfolio"
+                priority 
               />
             ) : (
               <Image
@@ -59,6 +60,7 @@ function Header() {
                 width={398}
                 height={50}
                 alt="mishima's portfolio"
+                priority 
               />
             )
           ) : (
@@ -67,6 +69,7 @@ function Header() {
               width={398}
               height={50}
               alt="mishima's portfolio"
+              priority
             />
           )}
         </div>
