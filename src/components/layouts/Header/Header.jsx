@@ -44,7 +44,7 @@ function Header() {
       className={`px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 shadow-inner z-10 fixed top-0 left-0 right-0 transition-colors duration-300 ${headerBgClass}`}
     >
       <div className="mx-auto flex justify-between items-center">
-        <div className="w-full max-lg:w-60">
+        <Link href={"/"} className="max-lg:w-60">
           {pathname === "/" ? (
             isScrolled ? (
               <Image
@@ -72,7 +72,7 @@ function Header() {
               priority
             />
           )}
-        </div>
+        </Link>
         <nav className={`max-md:hidden ${headerTextColorClass}`}>
           <ul className="flex gap-6 xl:gap-12">
             {MenuLinks.map((item) => {

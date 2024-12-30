@@ -7,6 +7,7 @@ import { SiWantedly } from "react-icons/si";
 import { loadSlim } from "@tsparticles/slim";
 import { appearDown, appearRight, appearUp } from "./utils/appear";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
+import Link from "next/link";
 
 function Hero() {
   const [init, setInit] = useState(false);
@@ -128,35 +129,35 @@ function Hero() {
             <h1 className="text-2xl lg:text-4xl">mishima</h1>
             <p className="text-lg lg:text-xl">This is a web creator's portfolio site.</p>
           </div>
-          <div  ref={elementRef} className={appearRight(isVisible)} style={{ transitionDelay: "1100ms" }}>
-            <div className="flex flex-row gap-2 items-center">
+          <div>
+            <div ref={elementRef} className={appearRight(isVisible, "flex flex-row gap-2 items-center")} style={{ transitionDelay: "1100ms" }}>
               <MdEmail />
-              <span className="text-darkblue pb-1 text-md lg:text-lg ">
+              <span className="text-darkblue pb-1 text-md lg:text-lg">
                 nobuhiro.mishima@outlook.com
               </span>
             </div>
             <div ref={elementRef} className={appearRight(isVisible, "flex flex-colitems-center gap-4 mb-3")} style={{ transitionDelay: "1200ms" }}>
-              <a
-                href=""
+              <Link
+                href="https://github.com/NobuhiroMishima"
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
                 target="_blank"
               >
                 <AiFillGithub />
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
                 target="_blank"
               >
                 <AiFillLinkedin />
-              </a>
-              <a
-                href=""
+              </Link>
+              <Link
+                href="https://www.wantedly.com/id/nobuhiro_mishima"
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
                 target="_blank"
               >
                 <SiWantedly />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

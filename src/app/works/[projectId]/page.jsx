@@ -69,7 +69,7 @@ async function ProjectDetail({ params }) {
         </div>
         <div className="flex justify-center">
           <PageTransitionButton
-            page={"work"}
+            page={"works"}
             textcolor={"black"}
             bgcolor={"white"}
             text={"一覧に戻る"}

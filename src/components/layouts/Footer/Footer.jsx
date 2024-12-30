@@ -12,7 +12,6 @@ function Footer() {
   const emailConfirmation = useRef();
   const message = useRef();
 
-
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -41,21 +40,48 @@ function Footer() {
           <div className="flex flex-col gap-12 mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 place-items-center">
               <div>
-                <Image src={"/assets/footer/banner-1.png"} alt="" width={272} height={100} />
+                <Image
+                  src={"/assets/footer/banner-1.png"}
+                  alt=""
+                  width={272}
+                  height={100}
+                />
               </div>
               <div>
-                <Image src={"/assets/footer/banner-2.png"} alt="" width={272} height={100}/>
+                <Image
+                  src={"/assets/footer/banner-2.png"}
+                  alt=""
+                  width={272}
+                  height={100}
+                />
               </div>
               <div>
-                <Image src={"/assets/footer/banner-3.png"} alt="" width={272} height={100}/>
+                <Image
+                  src={"/assets/footer/banner-3.png"}
+                  alt=""
+                  width={272}
+                  height={100}
+                />
               </div>
               <div>
-                <Image src={"/assets/footer/banner-4.png"} alt="" width={272} height={100}/>
+                <Image
+                  src={"/assets/footer/banner-4.png"}
+                  alt=""
+                  width={272}
+                  height={100}
+                />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-12 md:gap-32">
               <div className="flex flex-col gap-4 order-2 md:order-1">
-                <Image src={"/assets/footer/logo-sm.svg"} alt="" width={200} height={30} />
+                <Link href={"/"}>
+                  <Image
+                    src={"/assets/footer/logo-sm.svg"}
+                    alt=""
+                    width={200}
+                    height={30}
+                  />
+                </Link>
                 <ul className="flex flex-col gap-2">
                   {MenuLinks.map((item) =>
                     item === "Home" ? (
@@ -69,13 +95,13 @@ function Footer() {
                     )
                   )}
                 </ul>
-                <a
-                  href=""
+                <Link
+                  href="https://x.com/haganemental21"
                   className="w-6 cursor-pointer text-white text-2xl"
                   target="_blank"
                 >
                   <FaSquareXTwitter />
-                </a>
+                </Link>
               </div>
               <div className="flex flex-col gap-6 w-full order-1 md:order-2">
                 <p className="text-white text-center">
@@ -112,7 +138,9 @@ function Footer() {
                   </div>
                   <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-4">
                     <label htmlFor="emailConfirmation" className="text-white">
-                      メールアドレス<br />（確認用）
+                      メールアドレス
+                      <br />
+                      （確認用）
                     </label>
                     <input
                       type="email"
@@ -149,7 +177,9 @@ function Footer() {
             </div>
           </div>
           <div>
-            <p className="text-white text-sm text-center p-5">&copy; 2025 mishima All Rights Reserved</p>
+            <p className="text-white text-sm text-center p-5">
+              &copy; 2025 mishima All Rights Reserved
+            </p>
           </div>
         </div>
       </div>
