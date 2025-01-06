@@ -8,7 +8,7 @@ function Service({ servicemenu }) {
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 pt-4 mt-24 relative">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-start mb-12">
-          <Headline title={"Service"} subtitle={"サービス"} />
+          <Headline title="Service" subtitle="サービス" />
         </div>
         <div className="mb-4">
           <p>

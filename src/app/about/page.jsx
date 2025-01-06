@@ -14,7 +14,7 @@ function page() {
       <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 pt-16 relative">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-start mb-12">
-            <Headline title={"About"} subtitle={"私のこだわり"} />
+            <Headline title="About" subtitle="私のこだわり" />
           </div>
         </div>
       </div>

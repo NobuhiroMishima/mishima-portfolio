@@ -17,7 +17,7 @@ function About() {
             text={"ABOUT"}
             className="-tracking-widest bg-gradient-to-r from-green-700 bg-[length:100%_20px] bg-center bg-no-repeat"
           />
-          <Headline subtitle={"私のこだわり"} />
+          <Headline subtitle="私のこだわり" />
         </div>
         <div className="flex flex-col md:flex-row justify-between p-10 gap-8 xl:gap-20">
           <div className="max-md:flex max-md:justify-center">

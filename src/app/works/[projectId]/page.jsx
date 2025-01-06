@@ -1,5 +1,4 @@
 import PageTransitionButton from "@/components/elements/button/PageTransitionButton";
-import Headline from "@/components/elements/title/Headline";
 import SubHeadline from "@/components/elements/title/SubHeadline";
 import { projects } from "@/features/works/constants/projects";
 import ProjectHeadLine from "@/features/works/ProjectHeadLine";

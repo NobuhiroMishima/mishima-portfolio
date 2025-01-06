@@ -10,10 +10,8 @@ function notFound() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-start mb-12">
           <Headline
-            title={"ページが見つかりません。"}
-            subtitle={
-              "誠に申し訳ございませんが、アクセスいただいたURLが見つかりません。"
-            }
+            title="ページが見つかりません。"
+            subtitle="誠に申し訳ございませんが、アクセスいただいたURLが見つかりません。"
           />
         </div>
         <div className="flex flex-col lg:flex-row items-center gap-x-40 justify-around">
