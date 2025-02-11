@@ -125,18 +125,18 @@ function Hero() {
           未来を創る
         </div>
         <div className="absolute bottom-5 lg:bottom-20 left-5 xs:left-10 md:left-16 lg:left-40 flex flex-col gap-5">
-          <div ref={elementRef} className={appearRight(isVisible)} style={{ transitionDelay: "1000ms" }}>
+          <div className={appearRight(isVisible)} style={{ transitionDelay: "1000ms" }}>
             <h1 className="text-2xl lg:text-4xl">mishima</h1>
             <p className="text-lg lg:text-xl">This is a web creator's portfolio site.</p>
           </div>
           <div>
-            <div ref={elementRef} className={appearRight(isVisible, "flex flex-row gap-2 items-center")} style={{ transitionDelay: "1100ms" }}>
+            <div className={appearRight(isVisible, "flex flex-row gap-2 items-center")} style={{ transitionDelay: "1100ms" }}>
               <MdEmail />
               <span className="text-darkblue pb-1 text-md lg:text-lg">
                 nobuhiro.mishima@outlook.com
               </span>
             </div>
-            <div ref={elementRef} className={appearRight(isVisible, "flex flex-colitems-center gap-4 mb-3")} style={{ transitionDelay: "1200ms" }}>
+            <div className={appearRight(isVisible, "flex flex-colitems-center gap-4 mb-3")} style={{ transitionDelay: "1200ms" }}>
               <Link
                 href="https://github.com/NobuhiroMishima"
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"

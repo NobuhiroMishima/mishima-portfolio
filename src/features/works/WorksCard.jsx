@@ -1,12 +1,16 @@
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
+import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import { appear } from "@/components/utils/appear";
 import Link from "next/link";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaFigma } from "react-icons/fa";
 
 function WorksCard({ id, name, description, githubUrl, topicImage, category, tag }) {
+  const { elementRef, isVisible } = useIntersectionObserver();
+
   return (
-    <Link href={`/works/${id}`}>
-      <div className="w-80 min-h-[360px] bg-contentgray p-4 flex flex-col items-center rounded-lg">
+    <Link href={`/works/${id}`} ref={elementRef} className={appear(isVisible)}>
+      <div className="w-80 min-h-[360px] bg-contentgray p-4 flex flex-col items-center rounded-lg duration-500 shadow-md hover:shadow-card-md hover:translate-y-[-2px]">
         <img
           src={topicImage}
           alt={`${name} Image`}

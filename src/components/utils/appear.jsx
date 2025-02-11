@@ -1,4 +1,4 @@
-function generateAnimationClass(
+function generateAnimationDirectionClass(
   isVisible,
   baseClass = "",
   translateAxis = "y",
@@ -19,20 +19,36 @@ function generateAnimationClass(
   }`;
 }
 
+function generateAnimationClass(
+  isVisible,
+  baseClass = "",
+) {
+
+  return `${baseClass} transform transition-all duration-1000 ease-out ${
+    isVisible
+      ? "opacity-100"
+      : "opacity-0"
+  }`;
+}
+
+function appear(isVisible, baseClass = "") {
+  return generateAnimationClass(isVisible, baseClass);
+}
+
 function appearUp(isVisible, baseClass = "") {
-  return generateAnimationClass(isVisible, baseClass, "y", true);
+  return generateAnimationDirectionClass(isVisible, baseClass, "y", true);
 }
 
 function appearDown(isVisible, baseClass = "") {
-  return generateAnimationClass(isVisible, baseClass, "y", false);
+  return generateAnimationDirectionClass(isVisible, baseClass, "y", false);
 }
 
 function appearLeft(isVisible, baseClass = "") {
-  return generateAnimationClass(isVisible, baseClass, "x", true);
+  return generateAnimationDirectionClass(isVisible, baseClass, "x", true);
 }
 
 function appearRight(isVisible, baseClass = "") {
-  return generateAnimationClass(isVisible, baseClass, "x", false);
+  return generateAnimationDirectionClass(isVisible, baseClass, "x", false);
 }
 
-export { appearUp, appearDown, appearLeft, appearRight };
+export { appear, appearUp, appearDown, appearLeft, appearRight };

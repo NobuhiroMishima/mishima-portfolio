@@ -2,8 +2,12 @@ import React from "react";
 import Headline from "./elements/title/Headline";
 import Backtitle from "./elements/title/Backtitle";
 import ServiceCard from "@/features/service/ServiceCard";
+import { appearUp } from "./utils/appear";
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function Service({ servicemenu }) {
+  const { elementRef, isVisible } = useIntersectionObserver();
+
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 pt-4 mt-24 relative">
       <div className="max-w-6xl mx-auto">
@@ -11,7 +15,7 @@ function Service({ servicemenu }) {
           <Headline title="Service" subtitle="サービス" />
         </div>
         <div className="mb-4">
-          <p>
+          <p ref={elementRef} className={appearUp(isVisible)}>
             現状のユーザー体験の課題発見や課題解決に向けた企画、デザイン・設計から実装まで、ワンストップで解決します。
           </p>
         </div>

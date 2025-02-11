@@ -5,40 +5,40 @@
   top: 360px;
   width: 32px;
   height: 32px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: transparent;
   border-radius: 50%;
 }
 /* 前への矢印カスタマイズ */
 .swiper-button-prev::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 10px;
   width: calc(tan(60deg) * 20px / 2);
   height: 20px;
   clip-path: polygon(100% 100%, 0 50%, 100% 0);
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 10px;
   width: calc(tan(60deg) * 20px / 2);
   height: 20px;
   clip-path: polygon(0 100%, 100% 50%, 0 0);
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 
-.swiper-slide{
-    display: flex;
-    justify-content: center;
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
 }
-.swiper-slide:hover{
+.swiper-slide:hover {
   transform: translateY(-2px);
-  transition: 0.5s ease-in-out;
 }
 
-.swiper{
-    position: relative;
+.swiper {
+  position: relative;
 }

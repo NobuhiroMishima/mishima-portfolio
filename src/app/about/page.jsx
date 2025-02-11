@@ -7,8 +7,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
 import SubHeadline from "@/components/elements/title/SubHeadline";
+import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import { appear, appearLeft, appearRight, appearUp } from "@/components/utils/appear";
 
 function page() {
+  const { elementRef: ref1, isVisible: isVisible1 } = useIntersectionObserver();
+  const { elementRef: ref2, isVisible: isVisible2 } = useIntersectionObserver();
+  const { elementRef: ref3, isVisible: isVisible3 } = useIntersectionObserver();
+  const { elementRef: ref4, isVisible: isVisible4 } = useIntersectionObserver();
+  const { elementRef: ref5, isVisible: isVisible5 } = useIntersectionObserver();
   return (
     <div className="pb-24">
       <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 pt-16 relative">
@@ -19,7 +26,7 @@ function page() {
         </div>
       </div>
       <div className="flex flex-col gap-y-14 sm:gap-y-24 md:gap-y-24">
-        <section className="relative">
+        <section ref={ref1} className={appearRight(isVisible1, "relative")}>
           <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[640px] xs:h-[560px] sm:h-[544px] md:h-[500px] z-[-10]"></div>
           <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pr-5 sm:pr-10 md:pr-32 lg:pr-36">
@@ -55,7 +62,7 @@ function page() {
             </div>
           </div>
         </section>
-        <section className="relative">
+        <section ref={ref2} className={appearLeft(isVisible2, "relative")}>
           <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[640px] xs:h-[560px] sm:h-[544px] md:h-[500px] z-[-10]"></div>
           <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pl-5 sm:pl-10 md:pl-32 lg:pl-40">
@@ -89,14 +96,14 @@ function page() {
         </section>
         <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 relative">
           <div className="max-w-6xl mx-auto">
-            <div className="mb-10">
+            <div ref={ref3} className={appearUp(isVisible3, "mb-10")}>
               <SubHeadline text="Skills" />
               <p>
                 企画、デザイン・設計から実装まで幅広くスキルセットを保有しています。（2024年9月30日現在）
               </p>
             </div>
             <div className="flex flex-col lg:flex-row gap-16 items-center lg:items-start">
-              <div className="max-w-[458px] lg:max-w-[630px]">
+              <div ref={ref4} className={appear(isVisible4, "max-w-[458px] lg:max-w-[630px]")}>
                 <img src="../../assets/chart.png" alt="" />
                 <p>
                   ※現在は、本業で企画業務を担当し、副業でエンジニアリング業務を行っています。
@@ -106,7 +113,7 @@ function page() {
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="flex gap-x-4 w-full sm:w-[360px] xl:w-[458px] bg-contentgray p-2 rounded-lg"
+                    ref={ref5} className={appearLeft(isVisible5, "flex gap-x-4 w-full sm:w-[360px] xl:w-[458px] bg-contentgray p-2 rounded-lg")}
                   >
                     <div>{skill.image}</div>
                     <div className="flex flex-col w-full gap-1">

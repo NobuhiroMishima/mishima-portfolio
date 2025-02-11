@@ -5,11 +5,16 @@ import Headline from "@/components/elements/title/Headline";
 import { projects } from "@/features/works/constants/projects";
 import WorksCard from "@/features/works/WorksCard";
 import WorksFilter from "@/features/works/WorksFilter";
+import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import { appearUp } from "@/components/utils/appear";
+
 
 function page() {
   const [works, setWorks] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [filterd, setFilterd] = useState([]);
+  const { elementRef, isVisible } = useIntersectionObserver();
+
   useEffect(() => {
     setWorks(projects);
     setFilterd(projects);
@@ -20,7 +25,7 @@ function page() {
         <div className="flex flex-col items-start mb-12">
           <Headline title="Works" subtitle="これまでの実績" />
         </div>
-        <div className="flex flex-col gap-10">
+        <div ref={elementRef} className={appearUp(isVisible, "flex flex-col gap-10")}>
           <div>
             <p>
               個人から法人まで多様なジャンルの実績を紹介します。

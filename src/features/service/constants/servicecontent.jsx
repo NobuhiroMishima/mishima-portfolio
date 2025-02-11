@@ -58,16 +58,16 @@ export const servicecontent = [
             '具体的な料金については、お問い合わせの際に詳細な見積もりをお知らせいたします。'
         ],
         freeoption:[
-            '最新技術にも対応',
+            '最新技術に対応',
             '要件内の修正回数無制限',
             '充実のアフターサポート'
         ],
         mainimage: "../../assets/service/mainImage/main_fullplan.png",
-        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_dev.png",
     },
     {
         id: 4,
-        name: 'ランディングページ制作プラン',
+        name: 'ランディングページコーディングプラン',
         subcatch: 'マーケティングに特化',
         catch: 'コンバージョン率を高めるランディングページを制作いたします。',
         plandescription: '商品やサービスを効果的にプロモーションするためには、ユーザーの関心を一瞬で引き付け、明確な行動を促すランディングページ（LP）が欠かせません。本サービスでは、ユーザー心理やマーケティング戦略を考慮した構成設計を行い、目を引くビジュアルデザインと直感的なナビゲーションを融合させたLPを制作します。また、SEOやモバイルフレンドリーなデザインを取り入れ、あらゆるデバイスで高いコンバージョン率を実現します。',
@@ -85,11 +85,11 @@ export const servicecontent = [
             '納品後1カ月Webサイト分析'
         ],
         mainimage: "../../assets/service/mainImage/main_fullplan.png",
-        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_lp.png",
     },
     {
         id: 5,
-        name: ' UI/UX改善コンサルティングプラン',
+        name: 'UI/UX改善コンサルティングプラン',
         subcatch: '既存サイトの分析・課題抽出から',
         catch: 'ユーザーエクスペリエンス向上を目指した改善案を提案します。',
         plandescription: '現代のデジタル環境では、優れたUI（ユーザーインターフェース）とUX（ユーザー体験）が、ユーザーの満足度やビジネス成果に大きく影響を与えます。しかし、見た目のデザインだけに頼ることは、必ずしも効果的な結果をもたらしません。本サービスでは、ユーザー行動を調査・分析し、直感的で使いやすいデザインを目指します。さらに、ユーザー視点に立ったシナリオ設計を通じて、ユーザーが求める情報に迅速かつ簡単に到達できるように改善を提案します。',
@@ -107,7 +107,7 @@ export const servicecontent = [
             'ワイヤーフレーム作成'
         ],
         mainimage: "../../assets/service/mainImage/main_fullplan.png",
-        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_consulting.png",
     },
     {
         id: 6,
@@ -129,6 +129,6 @@ export const servicecontent = [
             '要件内の修正回数無制限'
         ],
         mainimage: "../../assets/service/mainImage/main_fullplan.png",
-        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
+        cardimage: "../../assets/service/cardImage/serviceCard_design.png",
     },
 ]

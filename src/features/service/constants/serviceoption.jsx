@@ -17,6 +17,21 @@ export const serviceoption = [
     {
         name: 'データ・サーバーアップ選択OK',
         image: "../../assets/service/optionicon/analyse.svg",
-        description: 'fugafuga',
+        description: 'ご希望の納品方法を選択することで、Webに関する知識が浅い場合にも作業無しでWebページを公開することができます。具体的にデータ・サーバーアップ選択サービスでは、依頼者のニーズに合わせて制作物のお渡しをご提供します。',
+    },
+    {
+        name: '最新技術に対応',
+        image: "../../assets/service/optionicon/intelligence.svg",
+        description: '最新技術を使用することで、ライバルのWebサイトとの優位性を見出し、ユーザーエンゲージメントを向上できます。具体的に最新技術に対応サービスでは、利便性の高いインターフェースやシームレスなユーザー利便性をご提供します。',
+    },
+    {
+        name: '要件内の修正回数無制限',
+        image: "../../assets/service/optionicon/infinite.svg",
+        description: '複数回修正することで、細かなこだわりを再現することができます。具体的に要件内の修正回数無制限サービスでは、要件内で納得いかないコンテンツを無料で変更・修正してご提供します。',
+    },
+    {
+        name: '充実のアフターサポート',
+        image: "../../assets/service/optionicon/support.svg",
+        description: 'アフターサポートを受けることで、サイトを効果的に運用することができます。具体的に充実のアフターサポートサービスでは、サイトの維持・管理や追加の要件追加を低価格でご提供します。',
     }
 ]
