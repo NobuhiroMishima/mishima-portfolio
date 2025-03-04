@@ -3,19 +3,17 @@
 import Headline from "@/components/elements/title/Headline";
 import React from "react";
 import { skills } from "@/features/about/constants/skills";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
 import SubHeadline from "@/components/elements/title/SubHeadline";
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
 import { appear, appearLeft, appearRight, appearUp } from "@/components/utils/appear";
+import SkillCard from "@/features/about/SkillCard";
 
 function page() {
   const { elementRef: ref1, isVisible: isVisible1 } = useIntersectionObserver();
   const { elementRef: ref2, isVisible: isVisible2 } = useIntersectionObserver();
   const { elementRef: ref3, isVisible: isVisible3 } = useIntersectionObserver();
   const { elementRef: ref4, isVisible: isVisible4 } = useIntersectionObserver();
-  const { elementRef: ref5, isVisible: isVisible5 } = useIntersectionObserver();
   return (
     <div className="pb-24">
       <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 pt-16 relative">
@@ -111,31 +109,32 @@ function page() {
               </div>
               <div className="flex flex-row lg:flex-col flex-wrap gap-y-6 justify-around">
                 {skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    ref={ref5} className={appearLeft(isVisible5, "flex gap-x-4 w-full sm:w-[360px] xl:w-[458px] bg-contentgray p-2 rounded-lg")}
-                  >
-                    <div>{skill.image}</div>
-                    <div className="flex flex-col w-full gap-1">
-                      <div className="flex flex-row justify-between">
-                        <h5 className="text-lg font-bold">{skill.name}</h5>
-                        <div>
-                          {Array.from({ length: 5 }, (_, i) => (
-                            <FontAwesomeIcon
-                              key={i}
-                              icon={faStar}
-                              style={{
-                                color: i < skill.star ? "#ffd233" : "#e4dccb",
-                              }}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <p className="text-sm">{skill.description}</p>
-                      </div>
-                    </div>
-                  </div>
+                  <SkillCard key={index} skill={skill} />
+                  // <div
+                  //   key={index}
+                  //   ref={ref5} className={appearLeft(isVisible5, "flex gap-x-4 w-full sm:w-[360px] xl:w-[458px] bg-contentgray p-2 rounded-lg")}
+                  // >
+                  //   <div>{skill.image}</div>
+                  //   <div className="flex flex-col w-full gap-1">
+                  //     <div className="flex flex-row justify-between">
+                  //       <h5 className="text-lg font-bold">{skill.name}</h5>
+                  //       <div>
+                  //         {Array.from({ length: 5 }, (_, i) => (
+                  //           <FontAwesomeIcon
+                  //             key={i}
+                  //             icon={faStar}
+                  //             style={{
+                  //               color: i < skill.star ? "#ffd233" : "#e4dccb",
+                  //             }}
+                  //           />
+                  //         ))}
+                  //       </div>
+                  //     </div>
+                  //     <div>
+                  //       <p className="text-sm">{skill.description}</p>
+                  //     </div>
+                  //   </div>
+                  // </div>
                 ))}
               </div>
             </div>

@@ -15,14 +15,10 @@ async function PlanDetail({ params }) {
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 pb-24 relative">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-start mb-12">
-          <Headline title={plan.name} />
+        <div className="flex flex-col-reverse items-start mb-12">
+          <Headline title={plan.catch} subtitle={plan.subcatch} />
         </div>
-        <div className="flex flex-col gap-10 mb-40">
-          <div>
-            <h4 className="text-center text-2xl">{plan.subcatch}</h4>
-            <h3 className="text-center text-3xl">{plan.catch}</h3>
-          </div>
+        <div className="flex flex-col gap-20 mb-40">
           <div className="flex flex-col lg:flex-row gap-x-20 gap-y-5 items-center lg:items-start">
             <div className="max-lg:order-2">
               <img
@@ -34,20 +30,22 @@ async function PlanDetail({ params }) {
             </div>
             <div className="flex flex-col items-center flex-1 gap-6 max-lg:order-1">
               <h5 className="relative w-[300px] sm:w-[480px] sm:h-[88px] px-4 sm:px-12 pt-8 pb-6 text-2xl border border-black before:absolute before:top-2 before:left-2 before:w-[300px] before:sm:w-[480px] before:h-[88px] before:bg-boxblue before:-z-10">
-                本サイト経由専用プラン
+                {plan.name}
               </h5>
               <div>
-                <p>{plan.plandescription}</p>
+                <p style={{ whiteSpace: 'pre-line' }}>{plan.plandescription}</p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
+          <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start">
             <h4 className="w-24 font-bold text-2xl">基本料金</h4>
-            <div>
-              <p className="flex-1 text-2xl">{`${plan.minprice}円～（料金はサイトによって変動します。）`}</p>
+            <div className="flex flex-col gap-y-3">
+              <p className="flex-1 text-2xl">{`${plan.minprice.toLocaleString()}円～（料金はサイトによって変動します。）`}</p>
+              <div>
               {plan.pricesupport.map((sentence) => (
-                <p>{sentence}</p>
+                <p>{`・${sentence}`}</p>
               ))}
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-14">

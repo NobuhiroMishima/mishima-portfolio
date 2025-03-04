@@ -33,5 +33,30 @@ export const serviceoption = [
         name: '充実のアフターサポート',
         image: "../../assets/service/optionicon/support.svg",
         description: 'アフターサポートを受けることで、サイトを効果的に運用することができます。具体的に充実のアフターサポートサービスでは、サイトの維持・管理や追加の要件追加を低価格でご提供します。',
-    }
+    },
+    {
+        name: 'レポートツール選択OK',
+        image: "../../assets/service/optionicon/report.svg",
+        description: 'レポートツールを選択できることで、普段使い慣れたツールで成果物を確認できます。具体的にレポートツール選択サービスでは、Office製品やGoogleドキュメントなど、希望のフォーマットでご提供します。',
+    },
+    {
+        name: 'カスタマージャーニーマップ作成',
+        image: "../../assets/service/optionicon/cjm.svg",
+        description: 'カスタマージャーニーマップを作成することで、ユーザーの行動や思考プロセスを可視化できます。具体的にカスタマージャーニーマップ作成サービスでは、ペルソナ設定やタッチポイントの整理を行い、最適なユーザー体験をご提供します。',
+    },
+    {
+        name: 'ワイヤーフレーム作成',
+        image: "../../assets/service/optionicon/wireframe.svg",
+        description: 'ワイヤーフレームを作成することで、Webサイトの構成を明確にし、スムーズな開発を進められます。具体的にワイヤーフレーム作成サービスでは、情報設計を整理し、レイアウトを視覚化した設計図をご提供します。',
+    },
+    {
+        name: 'プロトタイプ作成OK',
+        image: "../../assets/service/optionicon/prototype.svg",
+        description: 'プロトタイプを作成することで、Webサイトの動作やインタラクションを事前に確認できます。具体的にプロトタイプ作成サービスでは、Figmaを活用し、クリック可能なモックアップをご提供します',
+    },
+    {
+        name: 'レスポンシブデザイン対応',
+        image: "../../assets/service/optionicon/responsive.svg",
+        description: 'レスポンシブデザインに対応することで、PC・タブレット・スマートフォンなど、あらゆるデバイスで最適な表示が可能になります。具体的にレスポンシブデザイン対応では、CSSメディアクエリを活用し、各画面サイズに適したデザインをご提供します。',
+    },
 ]
