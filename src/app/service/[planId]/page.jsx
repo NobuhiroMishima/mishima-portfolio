@@ -3,6 +3,7 @@ import SubHeadline from "@/components/elements/title/SubHeadline";
 import { servicecontent } from "@/features/service/constants/servicecontent";
 import "../../../app/rotateCard.css";
 import { serviceoption } from "@/features/service/constants/serviceoption";
+import RelatedServices from "@/features/service/RelatedServices";
 
 async function PlanDetail({ params }) {
   const { planId } = await params;
@@ -11,6 +12,9 @@ async function PlanDetail({ params }) {
   if (!plan) {
     notFound();
   }
+
+  // 現在のサービスを取得するロジック
+  const currentService = servicecontent.find(service => service.id === parseInt(planId));
 
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 pb-24 relative">
@@ -84,7 +88,7 @@ async function PlanDetail({ params }) {
           </div>
         </div>
         <div>
-          <SubHeadline text="Related Services" />
+          <RelatedServices currentService={currentService} />
         </div>
       </div>
     </section>

@@ -42,26 +42,28 @@ function page() {
               />
             </Link>
           </div>
-          <div>
-            <ServiceFilter
-              activeCategory={activeCategory}
-              setActiveCategory={setActiveCategory}
-              services={services}
-              setFilterd={setFilterd}
-            />
-          </div>
-          <div className="flex justify-center">
-            <div className="flex flex-wrap justify-between max-w-[840px] gap-6">
-              {filterd.map((service, index) => (
-                <Link key={index} href={`/service/${service.id}`}>
-                  <img
-                    src={service.cardimage}
-                    alt={`${service.name} Imagae`}
-                    height={144}
-                    className="h-36 object-contain shadow-lg duration-500 hover:opacity-80 hover:bg-gray-100 hover:rounded-md"
-                  />
-                </Link>
-              ))}
+          <div className="flex justify-between">
+            <div className="mr-5">
+              <ServiceFilter
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+                services={services}
+                setFilterd={setFilterd}
+              />
+            </div>
+            <div className="flex justify-center">
+              <div className="flex flex-col lg:flex-row flex-wrap justify-between max-w-[840px] gap-4">
+                {filterd.map((service, index) => (
+                  <Link key={index} href={`/service/${service.id}`}>
+                    <img
+                      src={service.cardimage}
+                      alt={`${service.name} Imagae`}
+                      height={144}
+                      className="h-36 object-contain shadow-lg duration-500 hover:opacity-80 hover:bg-gray-100 hover:rounded-md"
+                    />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
