@@ -1,3 +1,4 @@
+"use client";
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
 import { appear } from "@/components/utils/appear";
@@ -32,8 +33,8 @@ function WorksCard({
               <div>
                 <h4 className="font-bold">{name}</h4>
                 <div className="flex gap-1">
-                  {category.map((category) => (
-                    <CategoryBadge text={category} />
+                  {category.map((category, index) => (
+                    <CategoryBadge key={index} text={category} />
                   ))}
                 </div>
               </div>

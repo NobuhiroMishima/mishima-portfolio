@@ -1,19 +1,21 @@
 import PageTransitionButton from "@/components/elements/button/PageTransitionButton";
-import SubHeadline from "@/components/elements/title/SubHeadline";
 import { projects } from "@/features/works/constants/projects";
 import ProjectHeadLine from "@/features/works/ProjectHeadLine";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import RelatedWorks from "@/features/works/RelatedWorks";
 
-async function ProjectDetail({ params }) {
+async function page({ params }) {
   const { projectId } = await params;
 
   const project = projects.find((project) => project.id == projectId);
   if (!project) {
     notFound();
   }
+
+  const currentCategories = project.category;
 
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 pb-24 relative">
@@ -34,15 +36,15 @@ async function ProjectDetail({ params }) {
               height={500}
               priority
             />
-              <Link
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex justify-center items-center gap-4"
-              >
-                <p>{project.url}</p>
-                <FaExternalLinkAlt />
-              </Link>
+            <Link
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center items-center gap-4"
+            >
+              <p>{project.url}</p>
+              <FaExternalLinkAlt />
+            </Link>
           </div>
           <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
             <h4 className="w-24 font-bold text-2xl">制作概要</h4>
@@ -63,8 +65,11 @@ async function ProjectDetail({ params }) {
             />
           </div>
         </div>
-        <div>
-          <SubHeadline text="Related Works" />
+        <div className="mb-20">
+          <RelatedWorks
+            currentProjectId={project.id}
+            currentCategories={currentCategories}
+          />
         </div>
         <div className="flex justify-center">
           <PageTransitionButton
@@ -79,4 +84,4 @@ async function ProjectDetail({ params }) {
   );
 }
 
-export default ProjectDetail;
+export default page;

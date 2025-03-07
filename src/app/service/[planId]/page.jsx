@@ -1,9 +1,9 @@
 import Headline from "@/components/elements/title/Headline";
-import SubHeadline from "@/components/elements/title/SubHeadline";
 import { servicecontent } from "@/features/service/constants/servicecontent";
 import "../../../app/rotateCard.css";
 import { serviceoption } from "@/features/service/constants/serviceoption";
 import RelatedServices from "@/features/service/RelatedServices";
+import PageTransitionButton from "@/components/elements/button/PageTransitionButton";
 
 async function PlanDetail({ params }) {
   const { planId } = await params;
@@ -87,8 +87,16 @@ async function PlanDetail({ params }) {
             </div>
           </div>
         </div>
-        <div>
+        <div className="mb-20">
           <RelatedServices currentService={currentService} />
+        </div>
+        <div className="flex justify-center">
+          <PageTransitionButton
+            page={"service"}
+            textcolor={"black"}
+            bgcolor={"white"}
+            text={"一覧に戻る"}
+          />
         </div>
       </div>
     </section>
