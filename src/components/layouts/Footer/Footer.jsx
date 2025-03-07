@@ -34,11 +34,11 @@ function Footer() {
     <footer className="bg-footerblack">
       <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 pt-16 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col items-start mb-6">
+          {/* <div className="flex flex-col items-start mb-6">
             <h2 className="text-2xl font-medium text-white">関連サイト</h2>
-          </div>
+          </div> */}
           <div className="flex flex-col gap-12 mb-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 place-items-center">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 place-items-center">
               <div>
                 <Image
                   src={"/assets/footer/banner-1.png"}
@@ -71,7 +71,7 @@ function Footer() {
                   height={100}
                 />
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col md:flex-row gap-12 md:gap-32">
               <div className="flex flex-col gap-4 order-2 md:order-1">
                 <Link href={"/"}>

@@ -1,17 +1,17 @@
 export const projects = [
     {
         id: 1,
-        name: '自作ポートフォリオサイト',
-        description: '自身のポートフォリオサイトのデザインを作成しました。',
+        name: '自作サイト',
+        description: 'ポートフォリオサイトを作成しました。',
         githubUrl: 'https://www.figma.com/design/6Kf105ylH7IHIMrCTb8KDZ/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88?node-id=0-1&t=zgKhRHZLpnyZ1Ceo-1',
         topicImage: '/assets/projects/topicImage/card_MishimaPortfolio.jpg',
         screenImage: '/assets/projects/screenImage/screen_MishimaPortfolio.png',
-        detailImage: '/assets/projects/detailImage/detail_NoImage.png',
+        detailImage: '/assets/projects/detailImage/detail_MishimaPortfolio.png',
         url: '',
         overview: '最新のUI/UXデザインのトレンドを抑えたデザインを作成しました。従来のホームページのように直感的に理解できるデザインでありつつ、モダンなWebサイトでは頻出のカードコンポーネントをふんだんに使用しました。',
         content: 'Webデザイン / 上品な配色 / Figma / バナー / チケット / カードコンポーネント / 豊富な導線',
-        category: 'Design',
-        tag: ['デザイン', 'ポートフォリオサイト', 'Figma', 'カードコンポーネント']
+        category: ['Planning', 'Design', 'Development'],
+        tag: ['ポートフォリオサイト', 'デザイン', 'Figma', 'カードコンポーネント', 'React', 'Tailwind CSS', 'Next.js']
     },
     {
         id: 2,
@@ -24,27 +24,27 @@ export const projects = [
         url: 'https://mylearning-yq4s.onrender.com/',
         overview: 'JavaScriptベース・テクノロジーのMERNスタックを使用したアプリケーションを開発しました。動画学習した内容の登録・参照・削除・更新の基本機能に加え、ダッシュボード機能や無限スクロール機能を実装しました。',
         content: 'Webアプリ / CSS3コーディング / レスポンシブコーディング / 無限スクロール / ダッシュボード / MongoDB / Express / React / Node.js',
-        category: 'Development',
-        tag: ['エンジニア', 'webアプリ「MyLearning」', '無限スクロール', 'JavaScript', 'React', 'Node.js', 'MongoDB']
+        category: ['Planning', 'Development'],
+        tag: ['webアプリ', '「MyLearning」','開発', '無限スクロール', 'JavaScript', 'React', 'Node.js', 'MongoDB']
     },
     {
         id: 3,
-        name: 'Coming Soon',
-        description: 'Coming Soon',
+        name: 'フレッシュヒロウオ様',
+        description: 'ホームページのリニューアルを担当しました。（デザイン＆開発）',
         githubUrl: '',
         topicImage: '/assets/projects/topicImage/card_NoImage.png',
         screenImage: '/assets/projects/screenImage/screen_NoImage.png',
         detailImage: '/assets/projects/detailImage/detail_NoImage.png',
-        url: '',
+        url: 'https://hirouo.com/f-index.html',
         overview: 'Coming Soon',
         content: 'Coming Soon',
-        category: 'Development',
-        tag: ['Coming Soon', 'Coming Soon', 'Coming Soon']
+        category: ['Design', 'Development'],
+        tag: ['ホームページ', 'リニューアル', 'デザイン', 'Figma', 'WordPress', 'マルチサイト']
     },
     {
         id: 4,
-        name: 'Coming Soon',
-        description: 'Coming Soon',
+        name: '自作アプリ',
+        description: '星空スポットアプリを作成しました。',
         githubUrl: '',
         topicImage: '/assets/projects/topicImage/card_NoImage.png',
         screenImage: '/assets/projects/screenImage/screen_NoImage.png',
@@ -52,63 +52,7 @@ export const projects = [
         url: '',
         overview: 'Coming Soon',
         content: 'Coming Soon',
-        category: 'Development',
-        tag: ['Coming Soon', 'Coming Soon', 'Coming Soon']
-    },
-    {
-        id: 5,
-        name: 'Coming Soon',
-        description: 'Coming Soon',
-        githubUrl: '',
-        topicImage: '/assets/projects/topicImage/card_NoImage.png',
-        screenImage: '/assets/projects/screenImage/screen_NoImage.png',
-        detailImage: '/assets/projects/detailImage/detail_NoImage.png',
-        url: '',
-        overview: 'Coming Soon',
-        content: 'Coming Soon',
-        category: 'Development',
-        tag: ['Coming Soon', 'Coming Soon', 'Coming Soon']
-    },
-    {
-        id: 6,
-        name: 'Coming Soon',
-        description: 'Coming Soon',
-        githubUrl: '',
-        topicImage: '/assets/projects/topicImage/card_NoImage.png',
-        screenImage: '/assets/projects/screenImage/screen_NoImage.png',
-        detailImage: '/assets/projects/detailImage/detail_NoImage.png',
-        url: '',
-        overview: 'Coming Soon',
-        content: 'Coming Soon',
-        category: 'Development',
-        tag: ['Coming Soon', 'Coming Soon', 'Coming Soon']
-    },
-    {
-        id: 7,
-        name: 'Coming Soon',
-        description: 'Coming Soon',
-        githubUrl: '',
-        topicImage: '/assets/projects/topicImage/card_NoImage.png',
-        screenImage: '/assets/projects/screenImage/screen_NoImage.png',
-        detailImage: '/assets/projects/detailImage/detail_NoImage.png',
-        url: '',
-        overview: 'Coming Soon',
-        content: 'Coming Soon',
-        category: 'Development',
-        tag: ['Coming Soon', 'Coming Soon', 'Coming Soon']
-    },
-    {
-        id: 8,
-        name: 'Coming Soon',
-        description: 'Coming Soon',
-        githubUrl: '',
-        topicImage: '/assets/projects/topicImage/card_NoImage.png',
-        screenImage: '/assets/projects/screenImage/screen_NoImage.png',
-        detailImage: '/assets/projects/detailImage/detail_NoImage.png',
-        url: '',
-        overview: 'Coming Soon',
-        content: 'Coming Soon',
-        category: 'Development',
-        tag: ['Coming Soon', 'Coming Soon', 'Coming Soon']
+        category: ['Planning', 'Design', 'Development'],
+        tag: ['Webアプリ', '「星空スポット」', 'デザイン', 'Figma', '開発', 'PHP', 'Laravel', 'MySQL', 'React', 'Tailwind CSS']
     },
 ]

@@ -46,14 +46,11 @@ function About() {
             </div>
             <div
               ref={elementRef}
-              className={appearLeft(isVisible)}
+              className={appearLeft(isVisible, "flex gap-5 items-center")}
               style={{ transitionDelay: "100ms" }}
             >
-              <CategoryBadge text={"full-stack creator"} />
-              <div className="flex gap-8 font-bold text-xl">
-                <h5>Creator Name</h5>
-                <p>mishima</p>
-              </div>
+              <CategoryBadge text={"Web Creator"} />
+              <p className="inline-block font-bold text-xl">mishima</p>
             </div>
             <div
               ref={elementRef}
