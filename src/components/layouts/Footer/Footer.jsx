@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { MenuLinks } from "../Header/constants/menuLinks";
 import Link from "next/link";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -14,27 +14,77 @@ function Footer() {
   const message = useRef();
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    emailConfirmation: "",
+    message: "",
+  });
+
+  const validateInputs = () => {
+    const newErrors = {};
+    if (!name.current.value) {
+      newErrors.name = "名前を入力してください。";
+    }
+    if (!email.current.value || !/\S+@\S+\.\S+/.test(email.current.value)) {
+      newErrors.email = "有効なメールアドレスを入力してください。";
+    }
+    if (!emailConfirmation.current.value || email.current.value !== emailConfirmation.current.value) {
+      newErrors.emailConfirmation = "メールアドレスが一致しません。";
+    }
+    if (!message.current.value) {
+      newErrors.message = "お問い合わせ内容を入力してください。";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    // フロントエンドでのバリデーション
+    if (!validateInputs()) return;
+
+    // サーバーサイドでの最終バリデーション
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name.current.value,
+          email: email.current.value,
+          emailConfirmation: emailConfirmation.current.value,
+          message: message.current.value,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        setErrors(data.errors);
+        return;
+      }
+
+      // バリデーションが成功した場合、email.jsを使用してメールを送信
+      emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        }
-      )
-      .then(
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      ).then(
         () => {
           form.current.reset();
           console.log("SUCCESS!");
+          window.location.reload();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log("FAILED...", error);
         }
       );
+    } catch (error) {
+      console.log("FAILED...", error);
+    }
   };
 
   return (
@@ -116,32 +166,42 @@ function Footer() {
                   <br />
                   3日以内にご返信いたします。
                 </p>
-                <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} onSubmit={sendEmail} noValidate>
                   <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-4">
                     <label htmlFor="name" className="text-white">
                       お名前
                     </label>
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder="山田 太郎"
-                      name="name"
-                      ref={name}
-                      className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
-                    />
+                    <div className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] flex flex-col gap-2">
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="山田 太郎"
+                        name="name"
+                        ref={name}
+                        className=" text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
+                      />
+                      {errors.name && (
+                        <p className="text-red-500">{errors.name}</p>
+                      )}
+                    </div>
                   </div>
                   <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-4">
                     <label htmlFor="email" className="text-white">
                       メールアドレス
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      placeholder="example@example.com"
-                      name="email"
-                      ref={email}
-                      className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
-                    />
+                    <div className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] flex flex-col gap-2">
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="example@example.com"
+                        name="email"
+                        ref={email}
+                        className="text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
+                      />
+                      {errors.email && (
+                        <p className="text-red-500">{errors.email}</p>
+                      )}
+                    </div>
                   </div>
                   <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-4">
                     <label htmlFor="emailConfirmation" className="text-white">
@@ -149,27 +209,39 @@ function Footer() {
                       <br />
                       （確認用）
                     </label>
-                    <input
-                      type="email"
-                      id="emailConfirmation"
-                      placeholder="確認のためもう一度入力してください"
-                      name="emailConfirmation"
-                      ref={emailConfirmation}
-                      className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
-                    />
+                    <div className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] flex flex-col gap-2">
+                      <input
+                        type="email"
+                        id="emailConfirmation"
+                        placeholder="確認のためもう一度入力してください"
+                        name="emailConfirmation"
+                        ref={emailConfirmation}
+                        className="text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
+                      />
+                      {errors.emailConfirmation && (
+                        <p className="text-red-500">
+                          {errors.emailConfirmation}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-4">
                     <label htmlFor="message" className="text-white">
                       お問い合わせ内容
                     </label>
-                    <textarea
-                      id="message"
-                      placeholder="お問い合わせの内容を具体的にご記入ください"
-                      name="message"
-                      rows={"7"}
-                      ref={message}
-                      className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
-                    />
+                    <div className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] flex flex-col gap-2">
+                      <textarea
+                        id="message"
+                        placeholder="お問い合わせの内容を具体的にご記入ください"
+                        name="message"
+                        rows={"7"}
+                        ref={message}
+                        className="text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
+                      />
+                      {errors.message && (
+                        <p className="text-red-500">{errors.message}</p>
+                      )}
+                    </div>
                   </div>
                   <div className="flex justify-end">
                     <button
