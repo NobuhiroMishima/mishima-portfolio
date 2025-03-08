@@ -5,29 +5,36 @@ import { MenuLinks } from "../Header/constants/menuLinks";
 import Link from "next/link";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 function Footer() {
   const name = useRef();
   const email = useRef();
   const emailConfirmation = useRef();
   const message = useRef();
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm("service_ti8fgfg", "template_nu6i0ed", form.current, {
-    //     publicKey: "5uZHSseF4UjD3H080",
-    //   })
-    //   .then(
-    //     () => {
-    //       form.current.reset()
-    //       console.log("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          form.current.reset();
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
@@ -109,7 +116,7 @@ function Footer() {
                   <br />
                   3日以内にご返信いたします。
                 </p>
-                <form onSubmit={sendEmail}>
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-4">
                     <label htmlFor="name" className="text-white">
                       お名前
@@ -146,7 +153,7 @@ function Footer() {
                       type="email"
                       id="emailConfirmation"
                       placeholder="確認のためもう一度入力してください"
-                      name="email"
+                      name="emailConfirmation"
                       ref={emailConfirmation}
                       className="flex-1 w-full lg:max-w-[400px] xl:max-w-[600px] text-gray-700 border border-slate-200 rounded py-3 px-4 leading-tight"
                     />
@@ -157,7 +164,7 @@ function Footer() {
                     </label>
                     <textarea
                       id="message"
-                      placeholder="例: お問い合わせの内容を具体的にご記入ください"
+                      placeholder="お問い合わせの内容を具体的にご記入ください"
                       name="message"
                       rows={"7"}
                       ref={message}
