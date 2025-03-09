@@ -11,13 +11,16 @@ function About() {
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24">
       <div className="max-w-6xl mx-auto bg-contentgray">
-        <div className="flex flex-col items-center">
+        <div className="max-md:hidden flex flex-col items-center">
           <Backtitle
             color={"black"}
             text={"ABOUT"}
             className="-tracking-widest bg-gradient-to-r from-green-700 bg-[length:100%_20px] bg-center bg-no-repeat"
           />
           <Headline subtitle="私のこだわり" />
+        </div>
+        <div className="md:hidden flex flex-col items-center pt-10">
+          <Headline title="About" subtitle="私のこだわり" />
         </div>
         <div className="flex flex-col md:flex-row justify-between p-10 gap-8 xl:gap-20">
           <div className="max-md:flex max-md:justify-center">
@@ -49,8 +52,8 @@ function About() {
               className={appearLeft(isVisible, "flex gap-5 items-center")}
               style={{ transitionDelay: "100ms" }}
             >
-              <CategoryBadge text={"Web Creator"} />
               <p className="inline-block font-bold text-xl">mishima</p>
+              <CategoryBadge text={"Web Creator"} />
             </div>
             <div
               ref={elementRef}

@@ -6,7 +6,12 @@ import { skills } from "@/features/about/constants/skills";
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
 import SubHeadline from "@/components/elements/title/SubHeadline";
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
-import { appear, appearLeft, appearRight, appearUp } from "@/components/utils/appear";
+import {
+  appear,
+  appearLeft,
+  appearRight,
+  appearUp,
+} from "@/components/utils/appear";
 import SkillCard from "@/features/about/SkillCard";
 
 function page() {
@@ -25,26 +30,25 @@ function page() {
       </div>
       <div className="flex flex-col gap-y-14 sm:gap-y-24 md:gap-y-24">
         <section ref={ref1} className={appearRight(isVisible1, "relative")}>
-          <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[640px] xs:h-[560px] sm:h-[544px] md:h-[500px] z-[-10]"></div>
+          <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[600px] xs:h-[560px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
           <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pr-5 sm:pr-10 md:pr-32 lg:pr-36">
               <div className="w-full">
                 <SubHeadline text="Profile" />
               </div>
               <div className="flex-1 max-md:order-3">
-                <div className="mb-4">
-                  <CategoryBadge text={"full-stack creator"} />
-                  <div className="flex gap-8 font-bold text-lg lg:text-xl">
-                    <h5>Creator Name</h5>
-                    <p>mishima</p>
-                  </div>
+                <div className="flex gap-5 items-center mb-4">
+                  <p className="inline-block font-bold text-lg lg:text-xl">
+                    mishima
+                  </p>
+                  <CategoryBadge text={"Web Creator"} />
                 </div>
                 <div className="min-w-60">
                   <p>
                     1996年、広島県生まれ。筑波大学大学院にて情報工学を専攻し、修了。
                     <br />
-                    HR系SaaSプロダクト事業で3年ほどカスタマーサクセスを経験後、Webディレクター兼プランナーへとキャリアチェンジ。
-                    現在、副業としてデザインやエンジニアリングの領域をカバーしながら、企画からデザイン・コーディングまで幅広く手掛けるフルスタッククリエイターとして活動中。
+                    HR系SaaSプロダクト事業で3年間カスタマーサクセスを経験後、Webディレクター兼プランナーへとキャリアチェンジ。
+                    副業ではデザインやエンジニアリングの領域をカバーしながら、Webクリエイターとして企画からデザイン・コーディングまで一貫して手掛けています。
                   </p>
                 </div>
               </div>
@@ -61,7 +65,7 @@ function page() {
           </div>
         </section>
         <section ref={ref2} className={appearLeft(isVisible2, "relative")}>
-          <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[640px] xs:h-[560px] sm:h-[544px] md:h-[500px] z-[-10]"></div>
+          <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[600px] xs:h-[560px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
           <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pl-5 sm:pl-10 md:pl-32 lg:pl-40">
               <div className="w-full">
@@ -82,10 +86,9 @@ function page() {
                 </div>
                 <div className="min-w-60">
                   <p>
-                    これまでWebサイトやデジタルプロダクトに関わるさまざまな課題をアクセス解析や基幹データ分析、ユーザーインタビューやユーザーテストと組み合わせながら解決してきました。
+                    これまでWebサイトやデジタルプロダクトに関わるさまざまな課題をアクセス解析や基幹データ分析、ユーザーインタビューやABテストと組み合わせながら解決してきました。
                     <br />
-                    <br className="max-lg:hidden" />
-                    「このページが見られている」「このボタンが押下されている」といったユーザー行動の裏側にある心理やインサイトまで深く理解し本質的な課題を突き止めることで、優れた機能やデザイン、品質を実現できるのです。
+                    ユーザー行動の裏側にある心理やインサイトまで深く理解し本質的な課題を突き止め、UX向上につながるサイトを作成しています。
                   </p>
                 </div>
               </div>
@@ -97,11 +100,14 @@ function page() {
             <div ref={ref3} className={appearUp(isVisible3, "mb-10")}>
               <SubHeadline text="Skills" />
               <p>
-                企画、デザイン・設計から実装まで幅広くスキルセットを保有しています。（2024年9月30日現在）
+                企画、デザイン・設計から実装まで幅広くスキルセットを保有しています。（2025年3月現在）
               </p>
             </div>
             <div className="flex flex-col lg:flex-row gap-16 items-center lg:items-start">
-              <div ref={ref4} className={appear(isVisible4, "max-w-[458px] lg:max-w-[630px]")}>
+              <div
+                ref={ref4}
+                className={appear(isVisible4, "max-w-[458px] lg:max-w-[630px]")}
+              >
                 <img src="../../assets/chart.png" alt="" />
                 <p>
                   ※現在は、本業で企画業務を担当し、副業でエンジニアリング業務を行っています。

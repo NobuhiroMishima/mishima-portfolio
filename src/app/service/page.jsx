@@ -32,7 +32,7 @@ function page() {
               ※下記サービス以外のご相談につきましてもお気軽にご連絡ください。
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="max-md:hidden flex justify-center">
             <Link href={`/service/${servicecontent[0].id}`}>
               <img
                 src={servicecontent[0].cardimage}
@@ -42,7 +42,7 @@ function page() {
               />
             </Link>
           </div>
-          <div className="flex justify-between">
+          <div className="flex gap-y-10 lg:flex-row flex-col justify-between">
             <div className="mr-5">
               <ServiceFilter
                 activeCategory={activeCategory}
@@ -51,19 +51,17 @@ function page() {
                 setFilterd={setFilterd}
               />
             </div>
-            <div className="flex justify-center">
-              <div className="flex flex-col lg:flex-row flex-wrap justify-between max-w-[840px] gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 md:gap-y-10 gap-y-5 md:place-items-center">
                 {filterd.map((service, index) => (
                   <Link key={index} href={`/service/${service.id}`}>
                     <img
                       src={service.cardimage}
-                      alt={`${service.name} Imagae`}
-                      height={144}
+                      alt={`${service.name} Image`}
                       className="h-36 object-contain shadow-lg duration-500 hover:opacity-80 hover:bg-gray-100 hover:rounded-md"
+                      style={{ objectFit: 'cover', width: '100%', height: 'auto', maxWidth: '400px' }}
                     />
                   </Link>
                 ))}
-              </div>
             </div>
           </div>
         </div>
