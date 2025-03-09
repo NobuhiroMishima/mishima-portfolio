@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiWantedly } from "react-icons/si";
 import { loadSlim } from "@tsparticles/slim";
-import { appearDown, appearRight, appearUp } from "./utils/appear";
+import { appearRight, appearUp } from "./utils/appear";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
 import Link from "next/link";
 
