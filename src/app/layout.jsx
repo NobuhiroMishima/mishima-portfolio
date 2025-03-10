@@ -51,7 +51,7 @@ export const metadata = {
       "Webサイトやデジタルプロダクトの課題解決を行うmishimaのポートフォリオ。",
     images: [
       {
-        url: "/images/ogp-top.jpg",
+        url: "/images/ogp.jpg",
         width: 1200,
         height: 630,
         alt: "mishimaのポートフォリオサイト | プランニング・デザイン・開発の実績",
@@ -71,7 +71,7 @@ export const metadata = {
       "Webサイトやデジタルプロダクトの課題解決を行うmishimaのポートフォリオ。",
     images: [
       {
-        url: "/images/ogp-top.jpg",
+        url: "/images/ogp.jpg",
         width: 1200,
         height: 630,
         alt: "mishimaのポートフォリオサイト | プランニング・デザイン・開発の実績",

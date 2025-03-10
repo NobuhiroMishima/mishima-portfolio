@@ -7,7 +7,7 @@ function ServiceCard({ menu, index }) {
 
   return (
     <Link
-      href={"/service"}
+      href={`/service?category=${encodeURIComponent(menu.type)}`}
       ref={elementRef}
       className={appearUp(isVisible, "rounded-lg overflow-hidden bg-white max-w-[360px] hover:shadow-card-lg hover:translate-y-[-2px] hover:duration-500")}
       style={{ transitionDelay: `${index * 100}ms` }}

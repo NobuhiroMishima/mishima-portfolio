@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Headline from "@/components/elements/title/Headline";
 import { servicecontent } from "@/features/service/constants/servicecontent";
 import ServiceFilter from "@/features/service/ServiceFilter";
@@ -10,11 +11,19 @@ function page() {
   const [services, setServices] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [filterd, setFilterd] = useState([]);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     setServices(servicecontent.slice(1));
     setFilterd(servicecontent.slice(1));
-  }, []);
+    
+    const category = searchParams.get("category");
+    if (category) {
+      setActiveCategory(category);
+      const filtered = services.filter((service) => service.type === category);
+      setFilterd(filtered);
+    }
+  }, [searchParams]);
 
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16 pb-24 relative">
