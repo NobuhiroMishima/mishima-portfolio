@@ -4,10 +4,13 @@ import Headline from "./elements/title/Headline";
 import PageTransitionButton from "./elements/button/PageTransitionButton";
 import CategoryBadge from "./elements/badge/CategoryBadge";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
-import { appearLeft } from "./utils/appear";
+import { appearLeft, appearRight } from "./utils/appear";
 
 function About() {
-  const { elementRef, isVisible } = useIntersectionObserver();
+  const { elementRef: ref1, isVisible: isVisible1 } = useIntersectionObserver();
+  const { elementRef: ref2, isVisible: isVisible2 } = useIntersectionObserver();
+  const { elementRef: ref3, isVisible: isVisible3 } = useIntersectionObserver();
+  const { elementRef: ref4, isVisible: isVisible4 } = useIntersectionObserver();
   return (
     <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24">
       <div className="max-w-6xl mx-auto bg-contentgray">
@@ -23,7 +26,7 @@ function About() {
           <Headline title="About" subtitle="私のこだわり" />
         </div>
         <div className="flex flex-col md:flex-row justify-between p-10 gap-8 xl:gap-20">
-          <div className="max-md:flex max-md:justify-center">
+          <div ref={ref1} className={appearRight(isVisible1, "max-md:flex max-md:justify-center")}>
             <img
               src="./assets/aboutImage.jpg"
               alt="フィギュアの画像"
@@ -34,8 +37,8 @@ function About() {
           </div>
           <div className="flex flex-col w-full gap-6">
             <div
-              ref={elementRef}
-              className={appearLeft(isVisible, "flex justify-center")}
+              ref={ref2}
+              className={appearLeft(isVisible2, "flex justify-center")}
             >
               <h4 className="text-xl lg:text-2xl">
                 UXで価値を創造。
@@ -48,16 +51,16 @@ function About() {
               </h4>
             </div>
             <div
-              ref={elementRef}
-              className={appearLeft(isVisible, "flex gap-5 items-center")}
+              ref={ref3}
+              className={appearLeft(isVisible3, "flex gap-5 items-center")}
               style={{ transitionDelay: "100ms" }}
             >
               <p className="inline-block font-bold text-xl">mishima</p>
               <CategoryBadge text={"Web Creator"} />
             </div>
             <div
-              ref={elementRef}
-              className={appearLeft(isVisible)}
+              ref={ref4}
+              className={appearLeft(isVisible4)}
               style={{ transitionDelay: "200ms" }}
             >
               <p>
@@ -75,9 +78,8 @@ function About() {
               </p>
             </div>
             <div
-              ref={elementRef}
-              className={appearLeft(isVisible, "flex justify-end")}
-              style={{ transitionDelay: "100ms" }}
+              className="flex justify-end"
+              style={{ transitionDelay: "300ms" }}
             >
               <PageTransitionButton
                 page={"about"}

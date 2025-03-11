@@ -24,7 +24,7 @@ export const servicemenu = [
         image: "../../assets/service/development.jpg",
         description: 'フロントエンドのコーディングを中心に、高品質で維持しやすいWebサイトをユーザーに届けます。',
         detail: [
-            "フロントエンド開発 (HTML/CSS/JS)", "バックエンド開発 (PHP/JS) ※CMS (WordPress) 開発も可能です。"
+            "フロントエンド開発 (HTML/CSS/JS)", "バックエンド開発 (PHP/JS)\n※CMS (WordPress) 開発も可能です。"
         ]
 
 

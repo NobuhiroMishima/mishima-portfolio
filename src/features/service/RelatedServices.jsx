@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import { servicecontent } from "./constants/servicecontent.jsx";
 import SubHeadline from "@/components/elements/title/SubHeadline.jsx";
-import Link from "next/link.js";
+import ServiceBanner from "./ServiceBanner.jsx";
+import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import { appearUp } from "@/components/utils/appear";
 
 const RelatedServices = ({ currentService }) => {
+  const { elementRef, isVisible } = useIntersectionObserver();
   const currentType = currentService.type;
 
   const relatedServices = servicecontent.slice(1).filter(
@@ -13,18 +17,11 @@ const RelatedServices = ({ currentService }) => {
   );
 
   return (
-    <div>
+    <div ref={elementRef} className={appearUp(isVisible, "flex flex-col")}>
       <SubHeadline text="Related Services" />
       <div className="related-services">
         {relatedServices.map((service) => (
-          <Link key={service.id} href={`/service/${service.id}`}>
-            <img
-              src={service.cardimage}
-              alt={`${service.name} Imagae`}
-              height={144}
-              className="h-36 object-contain shadow-lg duration-500 hover:opacity-80 hover:bg-gray-100 hover:rounded-md"
-            />
-          </Link>
+          <ServiceBanner key={service.id} service={service} />
         ))}
       </div>
     </div>

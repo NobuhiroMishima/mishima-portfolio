@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useNavigate } from "react-router-dom";
+import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import { appearUp } from "@/components/utils/appear";
 
 function PageTransitionButton({ page, textcolor, bgcolor, text }) {
-
+  const { elementRef, isVisible } = useIntersectionObserver();
   return (
-    <Link href={`/${page}`}>
+    <Link ref={elementRef} className={appearUp(isVisible)} href={`/${page}`}>
       <div
         style={{
           backgroundColor: bgcolor,

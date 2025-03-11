@@ -3,7 +3,7 @@ export const projects = [
         id: 1,
         name: '自作サイト',
         description: 'ポートフォリオサイトを作成しました。',
-        githubUrl: 'https://www.figma.com/design/6Kf105ylH7IHIMrCTb8KDZ/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88?node-id=0-1&t=zgKhRHZLpnyZ1Ceo-1',
+        githubUrl: 'https://github.com/NobuhiroMishima/mishima-portfolio.git',
         topicImage: '/assets/projects/topicImage/card_MishimaPortfolio.jpg',
         screenImage: '/assets/projects/screenImage/screen_MishimaPortfolio.png',
         detailImage: '/assets/projects/detailImage/detail_MishimaPortfolio.png',

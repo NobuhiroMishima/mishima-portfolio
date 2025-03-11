@@ -34,7 +34,7 @@ function ServiceCard({ menu, index }) {
           <div>
             <ul className="list-disc list-inside">
               {menu.detail.map((content, index) => (
-                <li key={index} className="text-sm">
+                <li key={index} className="text-sm" style={{ whiteSpace: 'pre-line' }}>
                   {content}
                 </li>
               ))}

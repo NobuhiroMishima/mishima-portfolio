@@ -2,10 +2,11 @@ import PageTransitionButton from "@/components/elements/button/PageTransitionBut
 import { projects } from "@/features/works/constants/projects";
 import ProjectHeadLine from "@/features/works/ProjectHeadLine";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import RelatedWorks from "@/features/works/RelatedWorks";
+import WorksDetailContent from "@/features/works/WorksDetailContent";
+import WorksMV from "@/features/works/WorksMV";
+import WorksDetailImage from "@/features/works/WorksDetailImage";
 
 async function page({ params }) {
   const { projectId } = await params;
@@ -28,42 +29,10 @@ async function page({ params }) {
           />
         </div>
         <div className="flex flex-col gap-14 mb-40">
-          <div className="flex flex-col items-center">
-            <Image
-              src={project.screenImage}
-              alt={`${project.name} Image`}
-              width={800}
-              height={500}
-              priority
-            />
-            <Link
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center items-center gap-4"
-            >
-              <p>{project.url}</p>
-              <FaExternalLinkAlt />
-            </Link>
-          </div>
-          <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
-            <h4 className="w-24 font-bold text-2xl">制作概要</h4>
-            <p className="flex-1">{project.overview}</p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-x-28 gap-y-5 items-start md:items-center">
-            <h4 className="w-24 font-bold text-2xl">制作内容</h4>
-            <p className="flex-1">{project.content}</p>
-          </div>
-          <div className="flex flex-col gap-14">
-            <h4 className="w-24 font-bold text-2xl">制作画像</h4>
-            <Image
-              src={project.detailImage}
-              alt=""
-              width={740}
-              height={1200}
-              className="m-auto"
-            />
-          </div>
+          <WorksMV project={project} />
+          <WorksDetailContent title="制作概要" content={project.overview} />
+          <WorksDetailContent title="制作内容" content={project.content} />
+          <WorksDetailImage project={project} />
         </div>
         <div className="mb-20">
           <RelatedWorks
