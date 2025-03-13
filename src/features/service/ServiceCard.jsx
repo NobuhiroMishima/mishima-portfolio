@@ -24,8 +24,12 @@ function ServiceCard({ menu, index }) {
         <div className="flex flex-col p-4 gap-4">
           <div className="flex justify-between items-center">
             <h4 className="font-bold text-lg">{menu.type}</h4>
-            <p className="text-xs border-2 border-red-600 rounded-lg px-2 py-[2px]">
-              受付停止中
+            <p
+              className={`w-20 text-xs border-2 rounded-lg flex justify-center py-[2px] ${
+                menu.status === '受付停止中' ? 'border-red-600' : 'border-taggreen'
+              }`}
+            >
+              {menu.status}
             </p>
           </div>
           <div className="flex flex-col justify-between">

@@ -6,8 +6,10 @@ import Link from "next/link";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
+import { useRouter } from "next/navigation";
 
 function Footer() {
+  const router = useRouter();
   const name = useRef();
   const email = useRef();
   const emailConfirmation = useRef();
@@ -61,10 +63,16 @@ function Footer() {
       });
 
       if (!response.ok) {
-        const data = await response.json();
-        setErrors(data.errors);
+        if (response.status >= 500) {
+          router.push("/500");
+        }else{
+          const data = await response.json();
+          setErrors(data.errors);
+        }
         return;
       }
+
+
 
       // バリデーションが成功した場合、email.jsを使用してメールを送信
       emailjs.sendForm(
@@ -84,6 +92,7 @@ function Footer() {
       );
     } catch (error) {
       console.log("FAILED...", error);
+      router.push("/500");
     }
   };
 

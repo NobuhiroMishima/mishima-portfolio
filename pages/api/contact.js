@@ -1,8 +1,15 @@
+import fs from 'fs';
+import path from 'path';
+
 export default async function handler(req, res) {
-  if (req.method === 'POST') {
+  try {
+    if (req.method !== 'POST') {
+      return res.status(405).json({ error: "Method Not Allowed" });
+    }
+
     const { name, email, emailConfirmation, message } = req.body;
 
-    // サーバーサイドバリデーション
+    // バリデーション
     const errors = {};
     if (!name) {
       errors.name = "名前を入力してください。";
@@ -10,7 +17,7 @@ export default async function handler(req, res) {
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       errors.email = "有効なメールアドレスを入力してください。";
     }
-    if (email !== emailConfirmation) {
+    if (!emailConfirmation || email !== emailConfirmation) {
       errors.emailConfirmation = "メールアドレスが一致しません。";
     }
     if (!message) {
@@ -21,10 +28,19 @@ export default async function handler(req, res) {
       return res.status(400).json({ errors });
     }
 
-    // バリデーションが成功した場合
-    return res.status(200).json({ message: "バリデーションが成功しました。" });
-  } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+    return res.status(200).json({ message: "お問い合わせを受け付けました。" });
+  } catch (error) {
+    console.error("エラー発生:", error);
+
+    // エラーをログファイルに書き込む
+    const logFilePath = path.join(process.cwd(), 'error.log');
+    const errorMessage = `[${new Date().toISOString()}] エラー発生: ${error.message}\n`;
+    fs.appendFile(logFilePath, errorMessage, (err) => {
+      if (err) {
+        console.error("ログファイルへの書き込みに失敗しました:", err);
+      }
+    });
+
+    return res.status(500).json({ error: "サーバー内部でエラーが発生しました。" });
   }
 }

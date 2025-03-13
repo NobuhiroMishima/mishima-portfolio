@@ -6,19 +6,19 @@ export const skills = [
         name: 'Slack',
         description: 'コラボレーションツール',
         image: <Icon icon="logos:slack-icon" width="256" height="256" className="w-14 h-14" />,
-        star: 3
+        star: 4
     },
     {
         name: 'Teams',
         description: 'コラボレーションツール',
         image: <Icon icon="logos:microsoft-teams" width="256" height="239" className="w-14 h-14" />,
-        star: 4
+        star: 5
     },
     {
         name: 'Jira',
         description: 'プロジェクト管理ツール',
         image: <Icon icon="logos:jira" width="256" height="256" className="w-14 h-14" />,
-        star: 1
+        star: 2
     },
     {
         name: 'Google Analytics',
@@ -36,6 +36,12 @@ export const skills = [
         name: 'MySQL',
         description: 'リレーショナルデータベース管理',
         image: <Icon icon="logos:mysql" width="512" height="349" className="w-14 h-14" />,
+        star: 3
+    },
+    {
+        name: 'MongoDB',
+        description: 'NoSQLデータベース管理',
+        image: <Icon icon="logos:mongodb" width="256" height="256" className="w-14 h-14" />,
         star: 3
     },
     {
@@ -57,16 +63,16 @@ export const skills = [
         star: 4
     },
     {
-        name: 'Java Script',
-        description: '動的コンテンツ作成',
-        image: <Icon icon="logos:javascript" width="256" height="256" className="w-14 h-14" />,
-        star: 3
-    },
-    {
         name: 'Sass',
         description: 'CSS効率化',
         image: <Icon icon="skill-icons:sass" width="256" height="256" className="w-14 h-14" />,
         star: 4
+    },
+    {
+        name: 'Java Script',
+        description: '動的コンテンツ作成',
+        image: <Icon icon="logos:javascript" width="256" height="256" className="w-14 h-14" />,
+        star: 3
     },
     {
         name: 'React',
@@ -75,9 +81,21 @@ export const skills = [
         star: 4
     },
     {
+        name: 'Node.js',
+        description: 'サーバーサイド開発',
+        image: <Icon icon="logos:nodejs" width="256" height="256" className="w-14 h-14" />,
+        star: 3
+    },
+    {
         name: 'PHP',
         description: 'Webアプリケーション開発',
         image: <Icon icon="logos:php" width="256" height="135" className="w-14 h-14" />,
+        star: 3
+    },
+    {
+        name: 'Laravel',
+        description: 'Webアプリケーションフレームワーク',
+        image: <Icon icon="logos:laravel" width="256" height="135" className="w-14 h-14" />,
         star: 3
     },
     {
@@ -88,7 +106,7 @@ export const skills = [
     },
     {
         name: 'Figma',
-        description: 'サイトのカンプ、アプリのUI設計、ロゴ・アイコン作成',
+        description: 'アプリのUI設計、ロゴ・アイコン作成',
         image: <Icon icon="logos:figma" width="256" height="384" className="w-14 h-14" />,
         star: 3
     },
@@ -96,6 +114,6 @@ export const skills = [
         name: 'miro',
         description: 'ブレインストーミング、UXツール',
         image: <Icon icon="logos:miro-icon" width="256" height="256" className="w-14 h-14" />,
-        star: 3
+        star: 2
     }
 ]
