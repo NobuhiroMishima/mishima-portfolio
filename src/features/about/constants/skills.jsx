@@ -76,7 +76,7 @@ export const skills = [
     },
     {
         name: 'React',
-        description: 'シングルページアプリケーション開発',
+        description: 'SPA開発',
         image: <Icon icon="logos:react" width="256" height="228" className="w-14 h-14" />,
         star: 4
     },
@@ -106,7 +106,7 @@ export const skills = [
     },
     {
         name: 'Figma',
-        description: 'アプリのUI設計、ロゴ・アイコン作成',
+        description: 'UI設計、ロゴ・アイコン作成',
         image: <Icon icon="logos:figma" width="256" height="384" className="w-14 h-14" />,
         star: 3
     },

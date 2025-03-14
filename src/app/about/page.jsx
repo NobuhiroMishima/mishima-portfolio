@@ -30,8 +30,8 @@ function page() {
       </div>
       <div className="flex flex-col gap-y-14 sm:gap-y-24 md:gap-y-24">
         <section ref={ref1} className={appearRight(isVisible1, "relative")}>
-          <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[600px] xs:h-[560px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
-          <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
+          <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] lg:h-[500px] h-[600px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
+          <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 lg:py-16 py-12">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pr-5 sm:pr-10 md:pr-32 lg:pr-36">
               <div className="w-full">
                 <SubHeadline text="Profile" />
@@ -47,12 +47,12 @@ function page() {
                   <p>
                     1996年、広島県生まれ。筑波大学大学院にて情報工学を専攻し、修了。
                     <br />
-                    HR系SaaSプロダクト事業で3年間カスタマーサクセスを経験後、Webディレクター兼プランナーへとキャリアチェンジ。
+                    HR系SaaSプロダクト事業で3年間カスタマーサクセスを経験後、Webディレクター兼PdMへとキャリアチェンジ。
                     副業ではデザインやエンジニアリングの領域をカバーしながら、Webクリエイターとして企画からデザイン・コーディングまで一貫して手掛けています。
                   </p>
                 </div>
               </div>
-              <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0">
+              <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0 mb-4">
                 <img
                   src="./assets/profile.png"
                   alt="プロフィール画像"
@@ -65,13 +65,13 @@ function page() {
           </div>
         </section>
         <section ref={ref2} className={appearLeft(isVisible2, "relative")}>
-          <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] h-[600px] xs:h-[560px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
-          <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-16">
+          <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] lg:h-[500px] h-[600px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
+          <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 lg:py-16 py-12">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pl-5 sm:pl-10 md:pl-32 lg:pl-40">
               <div className="w-full">
                 <SubHeadline text="Why Create?" />
               </div>
-              <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0">
+              <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0 mb-4">
                 <img
                   src="./assets/create.png"
                   alt="クリエイトアイコン"
@@ -110,7 +110,7 @@ function page() {
               >
                 <img src="../../assets/chart.png" alt="" />
                 <p>
-                  ※現在は、本業で企画業務を担当し、副業でエンジニアリング業務を行っています。
+                  ※現在は、本業でPdM業務を担当し、副業でエンジニアリング業務を行っています。
                 </p>
               </div>
               <div className="flex flex-row lg:flex-col flex-wrap gap-y-6 justify-around">

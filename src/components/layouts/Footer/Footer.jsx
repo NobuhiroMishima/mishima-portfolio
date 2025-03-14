@@ -7,6 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/navigation";
+import Modal from "./Modal";
 
 function Footer() {
   const router = useRouter();
@@ -22,6 +23,8 @@ function Footer() {
     emailConfirmation: "",
     message: "",
   });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const validateInputs = () => {
     const newErrors = {};
@@ -65,14 +68,12 @@ function Footer() {
       if (!response.ok) {
         if (response.status >= 500) {
           router.push("/500");
-        }else{
+        } else {
           const data = await response.json();
           setErrors(data.errors);
         }
         return;
       }
-
-
 
       // バリデーションが成功した場合、email.jsを使用してメールを送信
       emailjs.sendForm(
@@ -83,8 +84,7 @@ function Footer() {
       ).then(
         () => {
           form.current.reset();
-          console.log("SUCCESS!");
-          window.location.reload();
+          setIsModalOpen(true);
         },
         (error) => {
           console.log("FAILED...", error);
@@ -271,6 +271,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </footer>
   );
 }
