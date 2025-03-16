@@ -60,7 +60,7 @@ function WorksCard({
               <AiFillGithub />
             </button>
           )}
-          {category.includes("Design") && (
+          {/* {category.includes("Design") && (
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -71,7 +71,7 @@ function WorksCard({
             >
               <FaFigma />
             </button>
-          )}
+          )} */}
         </div>
       </div>
     </Link>

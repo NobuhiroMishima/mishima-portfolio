@@ -7,7 +7,7 @@ export const projects = [
         topicImage: '/assets/projects/topicImage/card_MishimaPortfolio.jpg',
         screenImage: '/assets/projects/screenImage/screen_MishimaPortfolio.png',
         detailImage: '/assets/projects/detailImage/detail_MishimaPortfolio.png',
-        url: '',
+        url: 'https://mishimaworks.jp',
         overview: '最新のUI/UXデザインのトレンドを抑えたデザインを作成しました。従来のホームページのように直感的に理解できるデザインでありつつ、モダンなWebサイトでは頻出のカードコンポーネントをふんだんに使用しました。',
         content: 'Webデザイン / 上品な配色 / Figma / バナー / チケット / カードコンポーネント / 豊富な導線',
         category: ['Planning', 'Design', 'Development'],
