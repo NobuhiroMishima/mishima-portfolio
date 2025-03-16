@@ -18,8 +18,8 @@ export const servicecontent = [
             'Googleアナリティクス設定',
             '納品後1カ月Webサイト分析'
         ],
-        mainimage: "../../assets/service/mainImage/main_fullplan.png",
-        cardimage: "../../assets/service/cardImage/serviceCard_fullplan.png"
+        mainimage: "/assets/service/mainImage/main_fullplan.png",
+        cardimage: "/assets/service/cardImage/serviceCard_fullplan.png"
     },
     {
         id: 2,
@@ -40,8 +40,8 @@ export const servicecontent = [
             'Googleアナリティクス設定',
             'データ・サーバーアップ選択OK'
         ],
-        mainimage: "../../assets/service/mainImage/main_cording.svg",
-        cardimage: "../../assets/service/cardImage/serviceCard_cording.png",
+        mainimage: "/assets/service/mainImage/main_cording.svg",
+        cardimage: "/assets/service/cardImage/serviceCard_cording.png",
     },
     {
         id: 3,
@@ -62,8 +62,8 @@ export const servicecontent = [
             '要件内の修正回数無制限',
             '充実のアフターサポート'
         ],
-        mainimage: "../../assets/service/mainImage/main_dev.svg",
-        cardimage: "../../assets/service/cardImage/serviceCard_dev.png",
+        mainimage: "/assets/service/mainImage/main_dev.svg",
+        cardimage: "/assets/service/cardImage/serviceCard_dev.png",
     },
     // {
     //     id: 4,
@@ -84,8 +84,8 @@ export const servicecontent = [
     //         'Googleアナリティクス設定',
     //         '納品後1カ月Webサイト分析'
     //     ],
-    //     mainimage: "../../assets/service/mainImage/main_fullplan.png",
-    //     cardimage: "../../assets/service/cardImage/serviceCard_lp.png",
+    //     mainimage: "/assets/service/mainImage/main_fullplan.png",
+    //     cardimage: "/assets/service/cardImage/serviceCard_lp.png",
     // },
     {
         id: 5,
@@ -106,8 +106,8 @@ export const servicecontent = [
             'カスタマージャーニーマップ作成',
             'ワイヤーフレーム作成'
         ],
-        mainimage: "../../assets/service/mainImage/main_consulting.svg",
-        cardimage: "../../assets/service/cardImage/serviceCard_consulting.png",
+        mainimage: "/assets/service/mainImage/main_consulting.svg",
+        cardimage: "/assets/service/cardImage/serviceCard_consulting.png",
     },
     {
         id: 6,
@@ -128,7 +128,7 @@ export const servicecontent = [
             'レスポンシブデザイン対応',
             '要件内の修正回数無制限'
         ],
-        mainimage: "../../assets/service/mainImage/main_design.svg",
-        cardimage: "../../assets/service/cardImage/serviceCard_design.png",
+        mainimage: "/assets/service/mainImage/main_design.svg",
+        cardimage: "/assets/service/cardImage/serviceCard_design.png",
     },
 ]

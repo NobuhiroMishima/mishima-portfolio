@@ -1,7 +1,7 @@
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
 import { appearUp } from "@/components/utils/appear";
 import Link from "next/link";
-
+import Image from "next/image";
 function ServiceCard({ menu, index }) {
   const { elementRef, isVisible } = useIntersectionObserver();
 
@@ -13,10 +13,11 @@ function ServiceCard({ menu, index }) {
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div>
-        <img
+        <Image
           src={menu.image}
           alt={`${menu.name} Image`}
-          height={200}
+          height={240}
+          width={360}
           className="object-cover"
         />
       </div>

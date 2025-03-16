@@ -13,8 +13,8 @@ function WorksMV({ project }) {
       <Image
         src={project.screenImage}
         alt={`${project.name} Image`}
-        width={800}
-        height={500}
+        width={2144}
+        height={1340}
         priority
       />
       <Link

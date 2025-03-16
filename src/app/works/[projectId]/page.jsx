@@ -8,7 +8,7 @@ import WorksDetailContent from "@/features/works/WorksDetailContent";
 import WorksMV from "@/features/works/WorksMV";
 import WorksDetailImage from "@/features/works/WorksDetailImage";
 
-async function page({ params }) {
+async function Page({ params }) {
   const { projectId } = await params;
 
   const project = projects.find((project) => project.id == projectId);
@@ -53,4 +53,4 @@ async function page({ params }) {
   );
 }
 
-export default page;
+export default Page;

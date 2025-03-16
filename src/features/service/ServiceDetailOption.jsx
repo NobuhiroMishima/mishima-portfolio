@@ -2,7 +2,7 @@
 import { serviceoption } from "@/features/service/constants/serviceoption";
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
 import { appearUp } from "@/components/utils/appear";
-
+import Image from "next/image";
 function ServiceDetailOption({ plan }) {
     const { elementRef, isVisible } = useIntersectionObserver();
   return (
@@ -19,7 +19,7 @@ function ServiceDetailOption({ plan }) {
                 <div className="flip-face bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg flex flex-col items-center justify-center">
                   <div className="text-center">
                     <div className="text-white w-40 h-40 mx-auto rounded-full flex items-center justify-center">
-                      <img src={option.image} alt="" />
+                      <Image src={option.image} alt="" width={120} height={120} />
                     </div>
                     <h4 className="text-xl font-bold mb-12">{option.name}</h4>
                     <span className="block h-1 w-40 mx-auto bg-taggreen"></span>

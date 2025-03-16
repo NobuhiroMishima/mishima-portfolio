@@ -9,7 +9,7 @@ function WorksFilter({activeCategory, setActiveCategory, works, setFilterd}) {
                 work.category.includes(activeCategory)
             ))
         }
-    }, [activeCategory, setFilterd])
+    }, [activeCategory, setFilterd, works])
   return (
     <div className='flex gap-2 md:gap-5'>
         <button className={activeCategory === 'all' ? 'bg-taggreen py-1 px-3 text-white rounded-lg': "none"} onClick={() => setActiveCategory('all')}>全て</button>

@@ -15,6 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://mishimaworks.jp"),
   title: "mishima's portfolio | Webクリエイター",
   description:
     "Webクリエイターとして、Webサイトやデジタルプロダクトの課題解決に取り組む三島（mishima）のポートフォリオです。プランニング、デザイン、開発を通じて、ユーザー体験の向上に貢献します。",

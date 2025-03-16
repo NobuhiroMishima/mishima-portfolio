@@ -18,7 +18,7 @@ export const projects = [
         name: '自作アプリ',
         description: '動画学習管理アプリを作成しました。',
         githubUrl: 'https://github.com/NobuhiroMishima/myLearning.git',
-        topicImage: '/assets/projects/topicImage/card_MyLearning.png',
+        topicImage: '/assets/projects/topicImage/card_MyLearning.jpg',
         screenImage: '/assets/projects/screenImage/screen_MyLearning.png',
         detailImage: '/assets/projects/detailImage/detail_MyLearning.png',
         url: 'https://mylearning-yq4s.onrender.com/',

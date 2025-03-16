@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { appear } from "@/components/utils/appear";
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
-
+import Image from "next/image";
 function ServiceBanner({ service }) {
   const { elementRef, isVisible } = useIntersectionObserver();
 
@@ -13,7 +13,7 @@ function ServiceBanner({ service }) {
       ref={elementRef}
       className={appear(isVisible)}
     >
-      <img
+      <Image
         src={service.cardimage}
         alt={`${service.name} Image`}
         className="h-36 object-contain shadow-lg duration-500 hover:opacity-80 hover:bg-gray-100 hover:rounded-md"
@@ -23,6 +23,8 @@ function ServiceBanner({ service }) {
           height: "auto",
           maxWidth: "400px",
         }}
+        width={360}
+        height={144}
       />
     </Link>
   );

@@ -6,6 +6,7 @@ import { skills } from "@/features/about/constants/skills";
 import CategoryBadge from "@/components/elements/badge/CategoryBadge";
 import SubHeadline from "@/components/elements/title/SubHeadline";
 import useIntersectionObserver from "@/components/hooks/useIntersectionObserver";
+import Image from "next/image";
 import {
   appear,
   appearLeft,
@@ -14,7 +15,7 @@ import {
 } from "@/components/utils/appear";
 import SkillCard from "@/features/about/SkillCard";
 
-function page() {
+function Page() {
   const { elementRef: ref1, isVisible: isVisible1 } = useIntersectionObserver();
   const { elementRef: ref2, isVisible: isVisible2 } = useIntersectionObserver();
   const { elementRef: ref3, isVisible: isVisible3 } = useIntersectionObserver();
@@ -28,9 +29,9 @@ function page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-y-14 sm:gap-y-24 md:gap-y-24">
+      <div className="flex flex-col gap-y-20 sm:gap-y-28 md:gap-y-24">
         <section ref={ref1} className={appearRight(isVisible1, "relative")}>
-          <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] lg:h-[500px] h-[600px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
+          <div className="absolute top-0 left-0 bg-contentgray rounded-tr-lg rounded-br-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] lg:h-[500px] h-[600px] sm:h-[520px] md:h-[460px] z-[-10]"></div>
           <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 lg:py-16 py-12">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pr-5 sm:pr-10 md:pr-32 lg:pr-36">
               <div className="w-full">
@@ -53,8 +54,8 @@ function page() {
                 </div>
               </div>
               <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0 mb-4">
-                <img
-                  src="./assets/profile.png"
+                <Image
+                  src="/assets/profile.png"
                   alt="プロフィール画像"
                   width={400}
                   height={400}
@@ -65,15 +66,15 @@ function page() {
           </div>
         </section>
         <section ref={ref2} className={appearLeft(isVisible2, "relative")}>
-          <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] lg:h-[500px] h-[600px] sm:h-[544px] md:h-[460px] z-[-10]"></div>
+          <div className="absolute top-0 right-0 bg-contentgray rounded-tl-lg rounded-bl-lg  w-[calc(100%-20px)] sm:w-[calc(100%-40px)] md:w-[calc(100%-64px)] lg:w-[calc(100%*0.82)] lg:h-[500px] h-[600px] sm:h-[520px] md:h-[460px] z-[-10]"></div>
           <div className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 lg:py-16 py-12">
             <div className="max-w-6xl mx-auto flex flex-wrap flex-row justify-center md:justify-between gap-x-10 lg:gap-x-16 pl-5 sm:pl-10 md:pl-32 lg:pl-40">
               <div className="w-full">
                 <SubHeadline text="Why Create?" />
               </div>
               <div className="flex max-md:order-2 px-10 sm:px-36 md:px-0 mb-4">
-                <img
-                  src="./assets/create.png"
+                <Image
+                  src="/assets/create.png"
                   alt="クリエイトアイコン"
                   width={400}
                   height={400}
@@ -103,12 +104,12 @@ function page() {
                 企画、デザイン・設計から実装まで幅広くスキルセットを保有しています。（2025年3月現在）
               </p>
             </div>
-            <div className="flex flex-col lg:flex-row gap-16 items-center lg:items-start">
+            <div className="flex flex-col lg:flex-row gap-16 justify-between lg:items-start">
               <div
                 ref={ref4}
-                className={appear(isVisible4, "max-w-[458px] lg:max-w-[630px]")}
+                className={appear(isVisible4, "max-w-[560px] lg:max-w-[560px]")}
               >
-                <img src="../../assets/chart.png" alt="" />
+                <Image src="/assets/chart.png" alt="" width={560} height={560} />
                 <p>
                   ※現在は、本業でPdM業務を担当し、副業でエンジニアリング業務を行っています。
                 </p>
@@ -151,4 +152,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

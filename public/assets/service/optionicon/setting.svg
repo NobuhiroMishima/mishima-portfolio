@@ -1,14 +1,14 @@
-<svg width="154" height="154" viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="58" y="76.7998" width="9.6" height="19.2" fill="black"/>
-<rect x="72.5996" y="70.3999" width="9.6" height="25.6" fill="black"/>
-<rect x="87.1992" y="64" width="9.6" height="32" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M76.7999 115.2C98.0076 115.2 115.2 98.0076 115.2 76.7999C115.2 55.5922 98.0076 38.3999 76.7999 38.3999C55.5922 38.3999 38.3999 55.5922 38.3999 76.7999C38.3999 98.0076 55.5922 115.2 76.7999 115.2ZM76.7999 105.6C92.7057 105.6 105.6 92.7057 105.6 76.7999C105.6 60.8941 92.7057 47.9999 76.7999 47.9999C60.8941 47.9999 47.9999 60.8941 47.9999 76.7999C47.9999 92.7057 60.8941 105.6 76.7999 105.6Z" fill="#009C64"/>
-<rect x="72" y="28.7998" width="9.6" height="12.8" rx="3.2" fill="#009C64"/>
-<rect x="72" y="112" width="9.6" height="12.8" rx="3.2" fill="#009C64"/>
-<rect x="28.7998" y="81.5996" width="9.6" height="12.8" rx="3.2" transform="rotate(-90 28.7998 81.5996)" fill="#009C64"/>
-<rect x="112" y="81.5996" width="9.6" height="12.8" rx="3.2" transform="rotate(-90 112 81.5996)" fill="#009C64"/>
-<rect x="46.2529" y="114.135" width="9.6" height="12.8" rx="3.2" transform="rotate(-135 46.2529 114.135)" fill="#009C64"/>
-<rect x="105.084" y="55.3037" width="9.6" height="12.8" rx="3.2" transform="rotate(-135 105.084 55.3037)" fill="#009C64"/>
-<rect x="39.4648" y="46.2529" width="9.6" height="12.8" rx="3.2" transform="rotate(-45 39.4648 46.2529)" fill="#009C64"/>
-<rect x="98.2959" y="105.084" width="9.6" height="12.8" rx="3.2" transform="rotate(-45 98.2959 105.084)" fill="#009C64"/>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="41" y="59.8" width="9.6" height="19.2" fill="black"/>
+<rect x="55.5994" y="53.3999" width="9.6" height="25.6" fill="black"/>
+<rect x="70.1994" y="47" width="9.6" height="32" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59.8 98.2C81.0078 98.2 98.2 81.0077 98.2 59.8C98.2 38.5922 81.0078 21.4 59.8 21.4C38.5923 21.4 21.4 38.5922 21.4 59.8C21.4 81.0077 38.5923 98.2 59.8 98.2ZM59.8 88.6C75.7058 88.6 88.6 75.7058 88.6 59.8C88.6 43.8942 75.7058 31 59.8 31C43.8942 31 31 43.8942 31 59.8C31 75.7058 43.8942 88.6 59.8 88.6Z" fill="#009C64"/>
+<rect x="55" y="11.8" width="9.6" height="12.8" rx="3.2" fill="#009C64"/>
+<rect x="55" y="95" width="9.6" height="12.8" rx="3.2" fill="#009C64"/>
+<rect x="11.8" y="64.6" width="9.6" height="12.8" rx="3.2" transform="rotate(-90 11.8 64.6)" fill="#009C64"/>
+<rect x="95" y="64.6" width="9.6" height="12.8" rx="3.2" transform="rotate(-90 95 64.6)" fill="#009C64"/>
+<rect x="29.253" y="97.1353" width="9.6" height="12.8" rx="3.2" transform="rotate(-135 29.253 97.1353)" fill="#009C64"/>
+<rect x="88.0843" y="38.304" width="9.6" height="12.8" rx="3.2" transform="rotate(-135 88.0843 38.304)" fill="#009C64"/>
+<rect x="22.4647" y="29.253" width="9.6" height="12.8" rx="3.2" transform="rotate(-45 22.4647 29.253)" fill="#009C64"/>
+<rect x="81.296" y="88.0842" width="9.6" height="12.8" rx="3.2" transform="rotate(-45 81.296 88.0842)" fill="#009C64"/>
 </svg>

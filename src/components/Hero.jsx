@@ -127,7 +127,7 @@ function Hero() {
         <div className="absolute bottom-5 lg:bottom-20 left-5 xs:left-10 md:left-16 lg:left-40 flex flex-col gap-5">
           <div className={appearRight(isVisible)} style={{ transitionDelay: "1000ms" }}>
             <h1 className="text-2xl lg:text-4xl">mishima</h1>
-            <p className="text-lg lg:text-xl">This is a web creator's portfolio site.</p>
+            <p className="text-lg lg:text-xl">This is a web creator&#39;s portfolio site.</p>
           </div>
           <div>
             <div className={appearRight(isVisible, "flex flex-row gap-2 items-center")} style={{ transitionDelay: "1100ms" }}>

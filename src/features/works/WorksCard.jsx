@@ -5,7 +5,7 @@ import { appear } from "@/components/utils/appear";
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { FaFigma } from "react-icons/fa";
-
+import Image from "next/image";
 function WorksCard({
   id,
   name,
@@ -21,7 +21,7 @@ function WorksCard({
     <Link href={`/works/${id}`} ref={elementRef} className={appear(isVisible)}>
       <div className="w-[312px] min-h-[360px] bg-contentgray p-4 flex flex-col items-start justify-between rounded-lg duration-500 shadow-md hover:shadow-card-md hover:translate-y-[-2px]">
         <div className="w-[280px]">
-          <img
+          <Image
             src={topicImage}
             alt={`${name} Image`}
             width={280}

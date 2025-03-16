@@ -9,7 +9,7 @@ function ServiceFilter({activeCategory, setActiveCategory, services, setFilterd}
                 service.type.includes(activeCategory)
             ))
         }
-    }, [activeCategory, setFilterd])
+    }, [activeCategory, setFilterd, services])
   return (
     <div className='flex lg:flex-col gap-2 md:gap-5'>
         <button className={activeCategory === 'all' ? 'bg-taggreen py-1 px-3 text-white rounded-lg': "none"} onClick={() => setActiveCategory('all')}>全て</button>

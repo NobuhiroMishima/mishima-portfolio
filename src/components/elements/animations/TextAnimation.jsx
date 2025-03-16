@@ -24,7 +24,7 @@ const TextAnimation = ({ text }) => {
       );
       setHasAnimated(true); // アニメーションを一度だけ実行
     }
-  }, [isVisible, hasAnimated]);
+  }, [isVisible, hasAnimated, elementRef]);
 
   // テキストを1文字ずつ分割してラップ
   if (!text || typeof text !== "string") return;

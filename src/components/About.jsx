@@ -5,7 +5,7 @@ import PageTransitionButton from "./elements/button/PageTransitionButton";
 import CategoryBadge from "./elements/badge/CategoryBadge";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
 import { appearLeft, appearRight } from "./utils/appear";
-
+import Image from "next/image";
 function About() {
   const { elementRef: ref1, isVisible: isVisible1 } = useIntersectionObserver();
   const { elementRef: ref2, isVisible: isVisible2 } = useIntersectionObserver();
@@ -27,15 +27,19 @@ function About() {
         </div>
         <div className="flex flex-col md:flex-row justify-between p-10 gap-8 xl:gap-20">
           <div ref={ref1} className={appearRight(isVisible1, "max-md:flex max-md:justify-center")}>
-            <img
-              src="./assets/aboutImage.jpg"
+            <Image
+              src="/assets/aboutImage.jpg"
               alt="フィギュアの画像"
               width={256}
-              height={302}
-              className="h-[302px] object-cover max-md:rounded-full max-md:h-[256px]"
+              height={256}
+              className="h-auto w-auto object-cover max-md:rounded-full"
+              style={{
+                width: "auto",
+                height: "auto",
+              }}
             />
           </div>
-          <div className="flex flex-col w-full gap-6">
+          <div className="flex flex-col flex-1 gap-6">
             <div
               ref={ref2}
               className={appearLeft(isVisible2, "flex justify-center")}

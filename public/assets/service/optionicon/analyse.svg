@@ -1,12 +1,12 @@
-<svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="68" width="12" height="24" rx="6" fill="black"/>
-<rect x="18" y="52" width="12" height="40" rx="6" fill="black"/>
-<rect x="36" y="68" width="12" height="24" rx="6" fill="black"/>
-<rect x="54" y="36" width="12" height="56" rx="6" fill="black"/>
-<circle cx="6" cy="56" r="4" fill="black"/>
-<circle cx="24" cy="40" r="4" fill="black"/>
-<circle cx="42" cy="56" r="4" fill="black"/>
-<circle cx="60" cy="24" r="4" fill="black"/>
-<path d="M6 56L24 40L42 56L60 24" stroke="black" stroke-width="2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M72 29C72 36.1797 66.1797 42 59 42C51.8203 42 46 36.1797 46 29C46 21.8203 51.8203 16 59 16C66.1797 16 72 21.8203 72 29ZM71.5924 40.4208C68.4823 43.8479 63.9925 46 59 46C49.6112 46 42 38.3888 42 29C42 19.6112 49.6112 12 59 12C68.3888 12 76 19.6112 76 29C76 31.9384 75.2545 34.7026 73.9424 37.1139L81.4142 44.5858C82.1953 45.3668 82.1953 46.6332 81.4142 47.4142C80.6332 48.1953 79.3668 48.1953 78.5858 47.4142L71.5924 40.4208Z" fill="#009C64"/>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="14" y="82" width="12" height="24" rx="6" fill="black"/>
+<rect x="32" y="66" width="12" height="40" rx="6" fill="black"/>
+<rect x="50" y="82" width="12" height="24" rx="6" fill="black"/>
+<rect x="68" y="50" width="12" height="56" rx="6" fill="black"/>
+<circle cx="20" cy="70" r="4" fill="black"/>
+<circle cx="38" cy="54" r="4" fill="black"/>
+<circle cx="56" cy="70" r="4" fill="black"/>
+<circle cx="74" cy="38" r="4" fill="black"/>
+<path d="M20 70L38 54L56 70L74 38" stroke="black" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M86 43C86 50.1797 80.1797 56 73 56C65.8203 56 60 50.1797 60 43C60 35.8203 65.8203 30 73 30C80.1797 30 86 35.8203 86 43ZM85.5924 54.4208C82.4823 57.8479 77.9925 60 73 60C63.6112 60 56 52.3888 56 43C56 33.6112 63.6112 26 73 26C82.3888 26 90 33.6112 90 43C90 45.9384 89.2545 48.7026 87.9424 51.1139L95.4142 58.5858C96.1953 59.3668 96.1953 60.6332 95.4142 61.4142C94.6332 62.1953 93.3668 62.1953 92.5858 61.4142L85.5924 54.4208Z" fill="#009C64"/>
 </svg>

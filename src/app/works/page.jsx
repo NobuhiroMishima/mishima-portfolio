@@ -9,7 +9,7 @@ import useIntersectionObserver from "@/components/hooks/useIntersectionObserver"
 import { appearUp } from "@/components/utils/appear";
 
 
-function page() {
+function Page() {
   const [works, setWorks] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [filterd, setFilterd] = useState([]);
@@ -56,4 +56,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
