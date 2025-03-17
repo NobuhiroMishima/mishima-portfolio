@@ -93,7 +93,7 @@ function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-maingray`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-maingray text-black`}
       >
         <Header />
         {children}
