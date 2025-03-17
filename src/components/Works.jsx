@@ -14,7 +14,7 @@ function Works({ works }) {
   const { elementRef, isVisible } = useIntersectionObserver();
 
   return (
-    <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24 relative">
+    <section className="px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 mt-24 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center mb-12">
           <Headline title="Works" subtitle="これまでの実績" />
@@ -72,7 +72,7 @@ function Works({ works }) {
           />
         </div>
       </div>
-      <div className="absolute top-[-60px] left-28 z-[-10]">
+      <div className="absolute top-[-44px] left-28 z-[-10]">
         <Backtitle color={"#E3E3E3"} text={"WORKS"} />
       </div>
     </section>
