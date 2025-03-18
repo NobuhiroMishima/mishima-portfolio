@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mishimaworks.jp
+
+# Sitemaps
+Sitemap: https://mishimaworks.jp/sitemap.xml
