@@ -1,9 +1,0 @@
-{
-    "redirects": [
-        {
-            "source": "/favicon.ico",
-            "destination": "https://www.mishimaworks.jp/favicon.ico",
-            "permanent": true
-        }
-    ]
-}
