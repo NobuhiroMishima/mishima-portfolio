@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layouts/Header/Header";
 import Footer from "@/components/layouts/Footer/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -92,6 +93,7 @@ export const viewport = {
 function RootLayout({ children }) {
   return (
     <html lang="ja">
+      <GoogleTagManager gtmId="GTM-TKHW36KR" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-maingray text-black`}
       >
