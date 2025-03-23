@@ -47,7 +47,7 @@ function WorksCard({
             </div>
           </div>
         </div>
-        <div className="flex gap-2 w-[280px]">
+        <div className="flex gap-2 w-[280px]" id="cta_works_card_external_link">
           {category.includes("Development") && (
             <button
               onClick={(e) => {
