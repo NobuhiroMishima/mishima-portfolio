@@ -87,10 +87,11 @@ function Header() {
           onClick={toggleMenu}
         >
           {isMenuOpen ? (
-            <FaTimes className="text-2xl cursor-pointer" />
+            <FaTimes className="text-2xl cursor-pointer" id="cta_menu_toggle_close"/>
           ) : (
             <FaBars
               className={`text-2xl cursor-pointer ${headerTextColorClass}`}
+              id="cta_menu_toggle_open"
             />
           )}
         </div>
@@ -98,11 +99,11 @@ function Header() {
           <ul className="flex gap-6 xl:gap-12">
             {MenuLinks.map((item) => {
               return item === "Home" ? (
-                <li key={item} className="text-xl lg:text-2xl lg:font-bold ">
+                <li key={item} className="text-xl lg:text-2xl lg:font-bold" id="cta_nav_home">
                   <Link href={`/`}>{item}</Link>
                 </li>
               ) : (
-                <li key={item} className="text-xl lg:text-2xl lg:font-bold ">
+                <li key={item} className="text-xl lg:text-2xl lg:font-bold" id={`cta_nav_${item.toLowerCase()}`}>
                   <Link href={`/${item.toLowerCase()}`}>{item}</Link>
                 </li>
               );
@@ -117,7 +118,7 @@ function Header() {
       >
         <ul className="flex flex-col gap-4 text-center">
           {MenuLinks.map((item) => (
-            <li key={item} className="text-2xl font-bold">
+            <li key={item} className="text-2xl font-bold" id={`cta_mobile_nav_${item.toLowerCase()}`}>
               <Link
                 href={item === "Home" ? `/` : `/${item.toLowerCase()}`}
                 onClick={closeMenu}
@@ -127,7 +128,7 @@ function Header() {
             </li>
           ))}
         </ul>
-        <div className="absolute bottom-4 right-4 flex gap-4">
+        <div className="absolute bottom-4 right-4 flex gap-4" id="cta_mobile_nav_x">
           <Link
             href="https://x.com/haganemental21"
             className="w-6 cursor-pointer text-2xl"
