@@ -11,6 +11,7 @@ function ServiceCard({ menu, index }) {
       ref={elementRef}
       className={appearUp(isVisible, "rounded-lg overflow-hidden bg-white max-w-[360px] hover:shadow-card-lg hover:translate-y-[-2px] hover:duration-500")}
       style={{ transitionDelay: `${index * 100}ms` }}
+      id={`cta_top_service_${menu.type.toLowerCase()}`}
     >
       <div>
         <Image

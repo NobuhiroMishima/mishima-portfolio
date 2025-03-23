@@ -141,6 +141,7 @@ function Hero() {
                 href="https://github.com/NobuhiroMishima"
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
                 target="_blank"
+                id="cta_top_github"
               >
                 <AiFillGithub />
               </Link>
@@ -148,6 +149,7 @@ function Hero() {
                 href="https://www.linkedin.com/in/%E6%9A%A2%E6%B4%8B-%E4%B8%89%E5%B3%B6-6543ba356/"
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
                 target="_blank"
+                id="cta_top_linkedin"
               >
                 <AiFillLinkedin />
               </Link>
@@ -155,6 +157,7 @@ function Hero() {
                 href="https://www.wantedly.com/id/nobuhiro_mishima"
                 className="bg-darkblue p-2 rounded-full cursor-pointer hover:bg-darkblue/75 text-white"
                 target="_blank"
+                id="cta_top_wantedly"
               >
                 <SiWantedly />
               </Link>

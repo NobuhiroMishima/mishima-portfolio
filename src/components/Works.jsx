@@ -43,7 +43,7 @@ function Works({ works }) {
             }}
           >
             {works.map((work, index) => (
-              <SwiperSlide key={index} className="p-4">
+              <SwiperSlide key={index} className="p-4" id={`cta_top_works_${index + 1}`}>
                 <WorksCardMini
                   id={work.id}
                   name={work.name}
@@ -63,7 +63,7 @@ function Works({ works }) {
             className="swiper-button-next max-md:hidden"
           ></div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center" id="cta_top_works_index">
           <PageTransitionButton
             page={"works"}
             textcolor={"black"}

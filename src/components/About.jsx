@@ -84,6 +84,7 @@ function About() {
             <div
               className="flex justify-end"
               style={{ transitionDelay: "300ms" }}
+              id="cta_top_about_more"
             >
               <PageTransitionButton
                 page={"about"}
