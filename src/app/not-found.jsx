@@ -22,7 +22,7 @@ function notFound() {
             <p className="mb-10">
               HOMEから再度アクセスいただくか、少し時間を空けてお試しください。
             </p>
-            <div id="cta_404_home">
+            <div id="cta_page_not_found_home">
               <PageTransitionButton
                 page={""}
                 textcolor={"white"}

@@ -6,7 +6,7 @@ function Error500() {
       <h1>500 - システムエラー</h1>
       <p>申し訳ありません。システムエラーが発生しました。</p>
       <p>しばらく経ってから再度お試しください。</p>
-      <Link id="cta_500_home" href="/">トップページへ戻る</Link>
+      <Link id="cta_system_error_home" href="/">トップページへ戻る</Link>
     </div>
   );
 }
