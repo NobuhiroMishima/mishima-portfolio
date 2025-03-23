@@ -22,12 +22,14 @@ function notFound() {
             <p className="mb-10">
               HOMEから再度アクセスいただくか、少し時間を空けてお試しください。
             </p>
-            <PageTransitionButton
-              page={""}
-              textcolor={"white"}
-              bgcolor={"black"}
-              text={"HOMEから探す"}
-            />
+            <div id="cta_404_home">
+              <PageTransitionButton
+                page={""}
+                textcolor={"white"}
+                bgcolor={"black"}
+                text={"HOMEから探す"}
+              />
+            </div>
           </div>
         </div>
       </div>
