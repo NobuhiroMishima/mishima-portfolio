@@ -53,7 +53,7 @@ function ServicePageContent() {
               ※下記サービス以外のご相談につきましてもお気軽にご連絡ください。
             </p>
           </div>
-          <div className="max-md:hidden flex justify-center">
+          <div className="max-md:hidden flex justify-center" id="cta_service_banner_exclusive">
             <Link href={`/service/${servicecontent[0].id}`}>
               <Image
                 src={servicecontent[0].cardimage}
