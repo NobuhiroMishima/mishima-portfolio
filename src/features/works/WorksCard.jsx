@@ -18,7 +18,7 @@ function WorksCard({
   const { elementRef, isVisible } = useIntersectionObserver();
 
   return (
-    <Link href={`/works/${id}`} ref={elementRef} className={appear(isVisible)}>
+    <Link href={`/works/${id}`} ref={elementRef} className={appear(isVisible)} id="cta_works_card">
       <div className="w-[312px] min-h-[360px] bg-contentgray p-4 flex flex-col items-start justify-between rounded-lg duration-500 shadow-md hover:shadow-card-md hover:translate-y-[-2px]">
         <div className="w-[280px]">
           <Image
@@ -56,6 +56,7 @@ function WorksCard({
               }}
               rel="noopener noreferrer"
               className="text-2xl"
+              id="cta_works_card_github"
             >
               <AiFillGithub />
             </button>
