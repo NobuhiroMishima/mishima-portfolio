@@ -14,7 +14,7 @@ function ServiceDetailOption({ plan }) {
         {plan.freeoption.map((opt, index) => {
           const option = serviceoption.find((so) => so.name === opt);
           return (
-            <div key={index} className="flip-card w-80 h-80">
+            <div key={index} className="flip-card w-80 h-80" id={`cta_service_detail_option_card_${index + 1}`}>
               <div className="flip-inner relative w-full h-full">
                 <div className="flip-face bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg flex flex-col items-center justify-center">
                   <div className="text-center">

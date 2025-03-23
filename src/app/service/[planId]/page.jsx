@@ -36,7 +36,7 @@ async function PlanDetail({ params }) {
         <div className="mb-20">
           <RelatedServices currentService={currentService} />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center" id="cta_service_index">
           <PageTransitionButton
             page={"service"}
             textcolor={"black"}

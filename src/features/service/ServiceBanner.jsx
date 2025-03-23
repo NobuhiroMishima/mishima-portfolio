@@ -11,7 +11,7 @@ function ServiceBanner({ service }) {
     <Link
       href={`/service/${service.id}`}
       ref={elementRef}
-      className={appear(isVisible, "max-w-[400px]")}
+      className={appear(isVisible, "max-w-[400px] inline-block")}
       id="cta_service_banner"
     >
       <Image
