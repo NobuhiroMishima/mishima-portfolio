@@ -140,7 +140,7 @@ function Footer() {
             </div> */}
             <div className="flex flex-col md:flex-row gap-12 md:gap-32">
               <div className="flex flex-col gap-4 order-2 md:order-1">
-                <Link href={"/"}>
+                <Link href={"/"} id="cta_footer_title">
                   <Image
                     src={"/assets/footer/logo-sm.svg"}
                     alt=""
@@ -151,11 +151,11 @@ function Footer() {
                 <ul className="flex flex-col gap-2">
                   {MenuLinks.map((item) =>
                     item === "Home" ? (
-                      <li key={item} className="text-sm text-white">
+                      <li key={item} className="text-sm text-white" id="cta_footer_nav_home">
                         <Link href={`/`}>{item}</Link>
                       </li>
                     ) : (
-                      <li key={item} className="text-sm text-white">
+                      <li key={item} className="text-sm text-white" id={`cta_footer_nav_${item.toLowerCase()}`}>
                         <Link href={`/${item.toLowerCase()}`}>{item}</Link>
                       </li>
                     )
@@ -165,6 +165,7 @@ function Footer() {
                   href="https://x.com/haganemental21"
                   className="w-6 cursor-pointer text-white text-2xl"
                   target="_blank"
+                  id="cta_footer_x"
                 >
                   <FaSquareXTwitter />
                 </Link>
@@ -252,10 +253,10 @@ function Footer() {
                       )}
                     </div>
                   </div>
-                  <div className="flex justify-end">
+                  <div className="flex justify-end" id="cta_contact_submit">
                     <button
                       type="submit"
-                      className="bg-white font-medium w-full md:w-auto py-2 px-36 rounded hover:shadow-lg hover:bg-darkblue/75"
+                      className="bg-white font-medium w-full md:w-auto py-2 px-auto md:px-36 rounded hover:shadow-lg hover:bg-darkblue/75"
                     >
                       送信
                     </button>

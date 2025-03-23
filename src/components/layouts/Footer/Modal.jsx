@@ -11,7 +11,7 @@ function Modal({ isOpen, onClose }) {
           <p>お問い合わせありがとうございます。</p>
           <p>3日以内にご返信いたします。今しばらくお待ちください。</p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center" id="cta_contact_modal_close">
           <button
             onClick={onClose}
             className="bg-black text-white font-medium py-2 px-8 rounded shadow-lg hover:bg-opacity-80 duration-300 ease-in-out"
