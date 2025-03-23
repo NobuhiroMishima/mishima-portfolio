@@ -53,7 +53,7 @@ function Header() {
       className={`px-28 max-lg:px-16 max-md:px-10 max-xs:px-5 py-4 shadow-inner z-10 fixed top-0 left-0 right-0 transition-colors duration-300 ${headerBgClass}`}
     >
       <div className="mx-auto flex justify-between items-center">
-        <Link href={"/"} className="max-lg:w-60">
+        <Link href={"/"} className="max-lg:w-60" id="cta_header_title">
           {pathname === "/" ? (
             isScrolled ? (
               <Image
