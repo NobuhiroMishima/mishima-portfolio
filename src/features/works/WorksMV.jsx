@@ -22,6 +22,7 @@ function WorksMV({ project }) {
         target="_blank"
         rel="noopener noreferrer"
         className="flex justify-center items-center gap-4"
+        id="cta_works_external_link"
       >
         <p>{project.url}</p>
         <FaExternalLinkAlt />
