@@ -21,7 +21,7 @@ export const projects = [
         topicImage: '/assets/projects/topicImage/card_MyLearning.jpg',
         screenImage: '/assets/projects/screenImage/screen_MyLearning.png',
         detailImage: '/assets/projects/detailImage/detail_MyLearning.png',
-        url: 'https://mylearning-yq4s.onrender.com/',
+        url: 'https://learning.mishimaworks.jp/',
         overview: 'JavaScriptベース・テクノロジーのMERNスタックを使用したアプリケーションを開発しました。動画学習した内容の登録・参照・削除・更新の基本機能に加え、ダッシュボード機能や無限スクロール機能を実装しました。',
         content: 'Webアプリ / CSS3コーディング / レスポンシブコーディング / 無限スクロール / ダッシュボード / MongoDB / Express / React / Node.js',
         category: ['Planning', 'Development'],
