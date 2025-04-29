@@ -162,7 +162,7 @@ function Footer() {
                   )}
                 </ul>
                 <Link
-                  href="https://x.com/haganemental21"
+                  href="https://x.com/sotolife3141"
                   className="w-6 cursor-pointer text-white text-2xl"
                   target="_blank"
                   id="cta_footer_x"

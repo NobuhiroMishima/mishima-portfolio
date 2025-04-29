@@ -130,7 +130,7 @@ function Header() {
         </ul>
         <div className="absolute bottom-4 right-4 flex gap-4" id="cta_mobile_nav_x">
           <Link
-            href="https://x.com/haganemental21"
+            href="https://x.com/sotolife3141"
             className="w-6 cursor-pointer text-2xl"
             target="_blank"
             onClick={closeMenu}
